@@ -13,6 +13,7 @@
 // GNU General Public License for more details.
 
 // TODO:
+// Localization
 // get all settings from astdb for extensions
 // make all toggles clickable so they can be changed here
 // like, click on CW ON or OFF to toggle state, perhaps an image?
@@ -45,18 +46,23 @@ foreach ($full_list as $key => $value) {
 		$sub_heading =  dgettext($txtdom,$active_modules[$key]['name']);
 	}
 	$module_select[$sub_heading_id] = $sub_heading;
-	$html_txt_arr[$sub_heading] =   "<div class=\"$sub_heading_id\"><table id=\"set_table\" border=\"0\" width=\"85%\"><tr><td><br><strong>Ext.</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>VMX</strong></td>";	
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>VMXB1</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>VMXB2</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>VMXU1</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>VMXU2</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>FM</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>FM-list</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>CW</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>CF</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>CFB</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>CFU</strong></td></tr>\n";
+	$html_txt_arr[$sub_heading] =   "<div class=\"$sub_heading_id\"><table id=\"set_table\" border=\"0\" width=\"85%\"><tr>";
+	$html_txt_arr[$sub_heading] .=  "<tr><td><strong>Extension</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td colspan=\"5\" align=\"center\"><strong>VmX Locator</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td colspan=\"2\" align=\"center\"><strong>Follow-Me</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td colspan=\"4\" align=\"center\"><strong>Call status</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "</tr><td></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Status</strong></td>";	
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>1 Busy</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>1 Unavailable</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>2 Busy</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>2 Unavailable</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>FM</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>FM-list</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>CW</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>CF</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>CFB</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>CFU</strong></td></tr>\n";
 
 	foreach ($value as $exten => $item) {
 		$description = explode(":",$item['description'],2);	
@@ -71,8 +77,8 @@ foreach ($full_list as $key => $value) {
 		} ;
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxstate."</td>";
 		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/busy/1/ext")."</font></td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/busy/2/ext")."</font></td>";
 		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/unavail/1/ext")."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/busy/2/ext")."</font></td>";
 		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/unavail/2/ext")."</font></td>";
 		// Has the exten followme enabled?
 		$followme = $astman->database_get("AMPUSER",$exten."/followme/ddial"); 
@@ -129,28 +135,5 @@ if (!$quietmode) {
 
 $html_txt_arr[$sub_heading] .= "</table></div>";
 $html_txt .= implode("\n",$html_txt_arr);
-
-if (!$quietmode) {
-	$rnav_txt = '<div class="rnav"><form name="print" action="'.$_SERVER['PHP_SELF'].'?quietmode=on&'.$_SERVER['QUERY_STRING'].'" target=\"_blank\" method="post"><ul>';
-	foreach ($module_select as $id => $sub) {
-		$rnav_txt .= "<li><input type=\"checkbox\" value=\"$id\" name=\"$id\" id=\"$id\" class=\"disp_filter\" CHECKED /><label id=\"lab_$id\" name=\"lab_$id\" for=\"$id\">$sub</label></li>\n";
-	}
-	$rnav_txt .= "</ul><hr><div style=\"text-align:center\"><input type=\"submit\" value=\"".sprintf(dgettext('printextensions',_("Printer Friendly Page")))."\" /></div>\n";
-	echo $rnav_txt;
-?>
-	<script language="javascript">
-	<!-- Begin
-
-	$(document).ready(function(){
-		$(".disp_filter").click(function(){
-			$("."+this.id).slideToggle();
-		});
-	});
-
-	// End -->
-	</script>
-	</form></div>
-<?php
-}
 echo $html_txt."</div>";
 ?>
