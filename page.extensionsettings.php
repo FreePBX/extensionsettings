@@ -17,7 +17,7 @@
 // get all settings from astdb for extensions
 // make all toggles clickable so they can be changed here
 // like, click on CW ON or OFF to toggle state, perhaps an image?
-// same for VmX, enable or disable, or if time permits, change destinations, who knows, time is the linit
+// same for VmX, enable or disable, or if time permits, change destinations, who knows, time is the limit
 // Change the table so it has colors, perhaps make it scrollable with the headers intact??
 // and a dozen other things that I can think of.
 //
@@ -25,7 +25,7 @@
 $dispnum = 'extensionsettings';
 $extension = _("Extension");
 $vmxlocator = _("VmX Locator");
-$followme   = _("Folow-Me");
+$followme   = _("Follow-Me");
 $callstatus = _("Call status");
 $status     =_("Status");
 
@@ -36,8 +36,8 @@ $html_txt = '<div class="content">';
 if (!$extdisplay) {
 	$html_txt .= '<br><h2>'._("FreePBX Extension Settings").'</h2>';
 }
-//Dont waste astman calls, get all family keys in one call
 $full_list = framework_check_extension_usage(true);
+// Dont waste astman calls, get all family keys in one call
 // Get all AMPUSER settings
 $ampuser = $astman->database_show("AMPUSER");
 // Get all CW settings
@@ -49,7 +49,6 @@ $cfbsetting = $astman->database_show("CFB");
 // get all CFU settings
 $cfusetting = $astman->database_show("CFU");
 
-//freepbx_debug($testampuser['/AMPUSER/1405/vmx/busy/state']);
 foreach ($full_list as $key => $value) {
 
 	$sub_heading_id = $txtdom = $active_modules[$key]['rawname'];
@@ -86,42 +85,83 @@ foreach ($full_list as $key => $value) {
 		$description = explode(":",$item['description'],2);	
 		$html_txt_arr[$sub_heading] .= "<tr><td><a href=\"".$item['edit_url']."\" class=\"info\">".$exten."<span>".(trim($description[1])==''?$exten:$description[1])."</span></a></td>";
 		// Is VmX enabled?
-		if ( $ampuser['/AMPUSER/'.$exten.'/vmx/busy/state'] == "enabled" ) { 
+		if ( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/state']) && $ampuser['/AMPUSER/'.$exten.'/vmx/busy/state']== "enabled" ) { 
 		    $color = "\"BLACK\"";
-		    $vmxstate = "On";
+		    $vmxstate = "<img src=\"images/accept.png\" alt=\"On\"/>";
 		} else { 
 		    $color = "\"GREY\"";
-		    $vmxstate = "Off";
+		    $vmxstate = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
 		} ;
+		// Do we have a VmX Busy for 1?
+		if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext'])) {
+		    $vmxb1 = $ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext'];
+		} else {
+		    $vmxb1 = "";
+		    }
+		// Do we have a VmX Unavail for 1?
+		if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/unavail/1/ext'])) {
+		    $vmxu1 = $ampuser['/AMPUSER/'.$exten.'/vmx/unavail/1/ext'];
+		} else {
+		    $vmxu1 = "";
+		    }
+		// Do we have a VmX Busy for 2?
+		if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/2/ext'])) {
+		    $vmxb2 = $ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext'];
+		} else {
+		    $vmxb2 = "";
+		    }
+		// Do we have a VmX Unavail for 2?
+		if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/unavail/2/ext'])) {
+		    $vmxu2 = $ampuser['/AMPUSER/'.$exten.'/vmx/unavail/1/ext'];
+		} else {
+		    $vmxu2 = "";
+		    }
+		
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxstate."</td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext']."</font></td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$ampuser['/AMPUSER/'.$exten.'/vmx/unavail/1/ext']."</font></td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$ampuser['/AMPUSER/'.$exten.'/vmx/busy/2/ext']."</font></td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$ampuser['/AMPUSER/'.$exten.'/vmx/unavail/2/ext']."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$vmxb1."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$vmxu1."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$vmxb2."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$vmxu2."</font></td>";
 		// Has the exten followme enabled?
-		    if($ampuser['/AMPUSER/'.$exten.'/followme/ddial'] == "DIRECT" || $followme == "EXTENSION") { 
-			$fm = "On"; 
+		    if( isset($ampuser['/AMPUSER/'.$exten.'/followme/ddial']) && $ampuser['/AMPUSER/'.$exten.'/followme/ddial'] == "DIRECT" || $followme == "EXTENSION") { 
+			$fm = "<img src=\"images/accept.png\" alt=\"On\"/>";
 		    } else { 
-			$fm = "Off"; 
+			$fm = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
 		    }
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$fm."</td>";
 		// If follow-me is enabled, get the follow-me list
 		if($fm == "On") {
 			$fmlist = str_replace("-","<br>",$ampuser['/AMPUSER/'.$exten.'/followme/grplist']);
-		    } else {
-			$fmlist = "";
-			}
+		} else {
+		    $fmlist = "";
+		    }
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$fmlist."</td>";
 		$fmlist = ""; // Empty the list
-		if( $cwsetting['/CW/'.$exten] == "ENABLED" ) { 
-		    $cw = "On"; 
-		    } else { 
-			$cw = "Off"; 
+		// Now get CW, CF, CFB and CFU if set
+		if( isset($cwsetting['/CW/'.$exten]) && $cwsetting['/CW/'.$exten] == "ENABLED" ) { 
+		    $cw = "<img src=\"images/accept.png\" alt=\"On\"/>";
+		} else { 
+			$cw = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
+		};
+		if( isset($cfsetting['/CF/'.$exten])) { 
+		    $cf = $cfsetting['/CF/'.$exten];
+		} else {
+			$cf = "";
+		};
+		if( isset($cfbsetting['/CFB/'.$exten])) {
+		    $cfb = $cfbsetting['/CFB/'.$exten];
+		} else {
+			$cfb = "";
+		};
+		if( isset($cfusetting['/CFU/'.$exten])) {
+		    $cfu = $cfusetting['/CFU/'.$exten];
+		} else {
+			$cfu = "";
 		};
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cw."</td>";
-		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cfsetting['/CF/'.$exten]."</td>";
-		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cfbsetting['/CFB/'.$exten]."</td>";
-		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cfusetting['/CFU/'.$exten]."</td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cf."</td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cfb."</td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cfu."</td>";
 		$html_txt_arr[$sub_heading] .= "</tr>\n";
 	}
 	$html_txt_arr[$sub_heading] .= "</table></div>";
