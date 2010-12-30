@@ -23,6 +23,12 @@
 //
 
 $dispnum = 'extensionsettings';
+$extension = _("Extension");
+$vmxlocator = _("VmX Locator");
+$followme   = _("Folow-Me");
+$callstatus = _("Call status");
+$status     =_("Status");
+
 global $active_modules;
 
 $html_txt = '<div class="content">';
@@ -30,8 +36,20 @@ $html_txt = '<div class="content">';
 if (!$extdisplay) {
 	$html_txt .= '<br><h2>'._("FreePBX Extension Settings").'</h2>';
 }
-
+//Dont waste astman calls, get all family keys in one call
 $full_list = framework_check_extension_usage(true);
+// Get all AMPUSER settings
+$ampuser = $astman->database_show("AMPUSER");
+// Get all CW settings
+$cwsetting = $astman->database_show("CW");
+// get all CF settings
+$cfsetting = $astman->database_show("CF");
+// get all CFB settings
+$cfbsetting = $astman->database_show("CFB");
+// get all CFU settings
+$cfusetting = $astman->database_show("CFU");
+
+//freepbx_debug($testampuser['/AMPUSER/1405/vmx/busy/state']);
 foreach ($full_list as $key => $value) {
 
 	$sub_heading_id = $txtdom = $active_modules[$key]['rawname'];
@@ -47,12 +65,12 @@ foreach ($full_list as $key => $value) {
 	}
 	$module_select[$sub_heading_id] = $sub_heading;
 	$html_txt_arr[$sub_heading] =   "<div class=\"$sub_heading_id\"><table id=\"set_table\" border=\"0\" width=\"85%\"><tr>";
-	$html_txt_arr[$sub_heading] .=  "<tr><td><strong>Extension</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td colspan=\"5\" align=\"center\"><strong>VmX Locator</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td colspan=\"2\" align=\"center\"><strong>Follow-Me</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td colspan=\"4\" align=\"center\"><strong>Call status</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<tr><td><strong>".$extension."</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td colspan=\"5\" align=\"center\"><strong>".$vmxlocator."</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td colspan=\"2\" align=\"center\"><strong>".$followme."</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td colspan=\"4\" align=\"center\"><strong>".$callstatus."</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "</tr><td></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Status</strong></td>";	
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>".$status."</strong></td>";	
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>1 Busy</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>1 Unavailable</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>2 Busy</strong></td>";
@@ -68,7 +86,7 @@ foreach ($full_list as $key => $value) {
 		$description = explode(":",$item['description'],2);	
 		$html_txt_arr[$sub_heading] .= "<tr><td><a href=\"".$item['edit_url']."\" class=\"info\">".$exten."<span>".(trim($description[1])==''?$exten:$description[1])."</span></a></td>";
 		// Is VmX enabled?
-		if ( $astman->database_get("AMPUSER",$exten."/vmx/busy/state") == "enabled" ) { 
+		if ( $ampuser['/AMPUSER/'.$exten.'/vmx/busy/state'] == "enabled" ) { 
 		    $color = "\"BLACK\"";
 		    $vmxstate = "On";
 		} else { 
@@ -76,38 +94,34 @@ foreach ($full_list as $key => $value) {
 		    $vmxstate = "Off";
 		} ;
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxstate."</td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/busy/1/ext")."</font></td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/unavail/1/ext")."</font></td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/busy/2/ext")."</font></td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/unavail/2/ext")."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext']."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$ampuser['/AMPUSER/'.$exten.'/vmx/unavail/1/ext']."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$ampuser['/AMPUSER/'.$exten.'/vmx/busy/2/ext']."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$ampuser['/AMPUSER/'.$exten.'/vmx/unavail/2/ext']."</font></td>";
 		// Has the exten followme enabled?
-		$followme = $astman->database_get("AMPUSER",$exten."/followme/ddial"); 
-		if( isset($followme)) {
-		    if($followme == "DIRECT" || $followme == "EXTENSION") { 
+		    if($ampuser['/AMPUSER/'.$exten.'/followme/ddial'] == "DIRECT" || $followme == "EXTENSION") { 
 			$fm = "On"; 
 		    } else { 
 			$fm = "Off"; 
 		    }
-		} // end isset
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$fm."</td>";
 		// If follow-me is enabled, get the follow-me list
 		if($fm == "On") {
-		    $fmlist = $astman->database_get("AMPUSER",$exten."/followme/grplist");
-			$fmlist = str_replace("-","<br>",$fmlist);
+			$fmlist = str_replace("-","<br>",$ampuser['/AMPUSER/'.$exten.'/followme/grplist']);
 		    } else {
 			$fmlist = "";
 			}
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$fmlist."</td>";
 		$fmlist = ""; // Empty the list
-		if( $astman->database_get("CW",$exten) == "ENABLED" ) { 
+		if( $cwsetting['/CW/'.$exten] == "ENABLED" ) { 
 		    $cw = "On"; 
 		    } else { 
 			$cw = "Off"; 
 		};
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cw."</td>";
-		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$astman->database_get("CF",$exten)."</td>";
-		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$astman->database_get("CFB",$exten)."</td>";
-		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$astman->database_get("CFU",$exten)."</td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cfsetting['/CF/'.$exten]."</td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cfbsetting['/CFB/'.$exten]."</td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cfusetting['/CFU/'.$exten]."</td>";
 		$html_txt_arr[$sub_heading] .= "</tr>\n";
 	}
 	$html_txt_arr[$sub_heading] .= "</table></div>";
