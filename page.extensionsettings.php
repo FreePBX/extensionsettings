@@ -34,8 +34,8 @@ $full_list = framework_check_extension_usage(true);
 foreach ($full_list as $key => $value) {
 
 	$sub_heading_id = $txtdom = $active_modules[$key]['rawname'];
-	if ($active_modules[$key]['rawname'] == 'featurecodeadmin' || ($quietmode && !isset($_REQUEST[$sub_heading_id]))) {
-		continue; // we don't want any featurecodes
+	if ($active_modules[$key]['rawname'] != 'core' || ($quietmode && !isset($_REQUEST[$sub_heading_id]))) {
+		continue; // we just want core
 	}
 	if ($txtdom == 'core') {
 		$txtdom = 'amp';
@@ -45,27 +45,59 @@ foreach ($full_list as $key => $value) {
 		$sub_heading =  dgettext($txtdom,$active_modules[$key]['name']);
 	}
 	$module_select[$sub_heading_id] = $sub_heading;
-	$html_txt_arr[$sub_heading] =   "<div class=\"$sub_heading_id\"><table border=\"1\" width=\"85%\"><tr><td><br><strong>Ext.</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td><br><strong>Description</strong></td>";
+	$html_txt_arr[$sub_heading] =   "<div class=\"$sub_heading_id\"><table id=\"set_table\" border=\"0\" width=\"85%\"><tr><td><br><strong>Ext.</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>VMX</strong></td>";	
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>VMXB1</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>VMXB2</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>VMXU1</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>VMXU2</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>FM</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>FM-list</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>CW</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>CF</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>CFB</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><br><strong>CFU</strong></td></tr>\n";
-	
+
 	foreach ($value as $exten => $item) {
-		$html_txt_arr[$sub_heading] .= "<tr><td>".$exten."</td>";
-		$description = explode(":",$item['description'],2);
-		$html_txt_arr[$sub_heading] .= "<td>".(trim($description[1])==''?$exten:$description[1])."</td>";
-		if ( $astman->database_get("AMPUSER",$exten."/vmx/busy/state") == "enabled" ) { } else { } ;
-		$html_txt_arr[$sub_heading] .= "<td>".$astman->database_get("AMPUSER",$exten."/vmx/busy/1/ext")."</td>";
-		$html_txt_arr[$sub_heading] .= "<td>".$astman->database_get("AMPUSER",$exten."/vmx/busy/2/ext")."</td>";
-		$html_txt_arr[$sub_heading] .= "<td>".$astman->database_get("AMPUSER",$exten."/vmx/unavail/1/ext")."</td>";
-		$html_txt_arr[$sub_heading] .= "<td>".$astman->database_get("AMPUSER",$exten."/vmx/unavail/2/ext")."</td>";
-		if( $astman->database_get("CW",$exten) == "ENABLED" ) { $cw = "ON"; } else { $cw = "OFF"; };
+		$description = explode(":",$item['description'],2);	
+		$html_txt_arr[$sub_heading] .= "<tr><td><a href=\"".$item['edit_url']."\" class=\"info\">".$exten."<span>".(trim($description[1])==''?$exten:$description[1])."</span></a></td>";
+		// Is VmX enabled?
+		if ( $astman->database_get("AMPUSER",$exten."/vmx/busy/state") == "enabled" ) { 
+		    $color = "\"BLACK\"";
+		    $vmxstate = "On";
+		} else { 
+		    $color = "\"GREY\"";
+		    $vmxstate = "Off";
+		} ;
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxstate."</td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/busy/1/ext")."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/busy/2/ext")."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/unavail/1/ext")."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$astman->database_get("AMPUSER",$exten."/vmx/unavail/2/ext")."</font></td>";
+		// Has the exten followme enabled?
+		$followme = $astman->database_get("AMPUSER",$exten."/followme/ddial"); 
+		if( isset($followme)) {
+		    if($followme == "DIRECT" || $followme == "EXTENSION") { 
+			$fm = "On"; 
+		    } else { 
+			$fm = "Off"; 
+		    }
+		} // end isset
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$fm."</td>";
+		// If follow-me is enabled, get the follow-me list
+		if($fm == "On") {
+		    $fmlist = $astman->database_get("AMPUSER",$exten."/followme/grplist");
+			$fmlist = str_replace("-","<br>",$fmlist);
+		    } else {
+			$fmlist = "";
+			}
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$fmlist."</td>";
+		$fmlist = ""; // Empty the list
+		if( $astman->database_get("CW",$exten) == "ENABLED" ) { 
+		    $cw = "On"; 
+		    } else { 
+			$cw = "Off"; 
+		};
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cw."</td>";
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$astman->database_get("CF",$exten)."</td>";
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$astman->database_get("CFB",$exten)."</td>";
