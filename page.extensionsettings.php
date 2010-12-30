@@ -51,6 +51,7 @@ $cfusetting = $astman->database_show("CFU");
 
 foreach ($full_list as $key => $value) {
 	$vmxcolor = "\"BLACK\"";
+
 	$sub_heading_id = $txtdom = $active_modules[$key]['rawname'];
 	if ($active_modules[$key]['rawname'] != 'core' || ($quietmode && !isset($_REQUEST[$sub_heading_id]))) {
 		continue; // we just want core
@@ -65,13 +66,15 @@ foreach ($full_list as $key => $value) {
 	$module_select[$sub_heading_id] = $sub_heading;
 	$html_txt_arr[$sub_heading] =   "<div class=\"$sub_heading_id\"><table id=\"set_table\" border=\"0\" width=\"85%\"><tr>";
 	$html_txt_arr[$sub_heading] .=  "<tr><td><strong>".$extension."</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td colspan=\"5\" align=\"center\"><strong>".$vmxlocator."</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td colspan=\"7\" align=\"center\"><strong>".$vmxlocator."</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td colspan=\"2\" align=\"center\"><strong>".$followme."</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td colspan=\"4\" align=\"center\"><strong>".$callstatus."</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "</tr><td></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>".$status."</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Busy</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Unavail</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Operator</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Press 0</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Press 1</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Press 2</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>FM</strong></td>";
@@ -82,6 +85,7 @@ foreach ($full_list as $key => $value) {
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>CFU</strong></td></tr>\n";
 
 	foreach ($value as $exten => $item) {
+		$vmxzero = "";
 		$vmxbusy = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
 		$vmxunavail = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
 		$description = explode(":",$item['description'],2);	
@@ -104,15 +108,22 @@ foreach ($full_list as $key => $value) {
 		    if ($ampuser['/AMPUSER/'.$exten.'/vmx/unavail/state'] == "enabled") {
 			$vmxunavail = "<img src=\"images/accept.png\" alt=\"On\"/>";
 		    } else {
-
 		    };
-		    // Do we have a VmX Busy/Unavail for 1? We only need to check one, as the number is the same for busy and unavail
+		    // Do we have a VmX Busy/Unavail number for 0? If we have, then show it, otherwise display "Operator"
+		    if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/0/ext'])) {
+		        $vmxzero = $ampuser['/AMPUSER/'.$exten.'/vmx/busy/0/ext'];
+		        $vmxoperator = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
+		    } else {
+		    	 $vmxzero = "Operator";
+		    	 $vmxoperator = "<img src=\"images/accept.png\" alt=\"On\"/>";
+		    }
+		    // Do we have a VmX Busy/Unavail for 1? We only need to check Busy, as the number is the same for busy and unavail
 		    if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext'])) {
 		        $vmxone = $ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext'];
 		    } else {
 		    	 $vmxone = "";
 		    }
-		    // Do we have a VmX Busy/Unavailable for 2?
+		    // Do we have a VmX Busy/Unavailable number for 2?
 		    if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/2/ext'])) {
 		        $vmxtwo = $ampuser['/AMPUSER/'.$exten.'/vmx/busy/2/ext'];
 		    } else {
@@ -126,6 +137,8 @@ foreach ($full_list as $key => $value) {
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxstate."</td>";
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxbusy."</td>";
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxunavail."</td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxoperator."</td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$vmxcolor.">".$vmxzero."</font></td>";
 		$html_txt_arr[$sub_heading] .= "<td><font color=".$vmxcolor.">".$vmxone."</font></td>";
 		$html_txt_arr[$sub_heading] .= "<td><font color=".$vmxcolor.">".$vmxtwo."</font></td>";
 		// Has the extension followme enabled?
