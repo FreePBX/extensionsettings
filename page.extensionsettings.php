@@ -50,7 +50,7 @@ $cfbsetting = $astman->database_show("CFB");
 $cfusetting = $astman->database_show("CFU");
 
 foreach ($full_list as $key => $value) {
-
+	$vmxcolor = "\"BLACK\"";
 	$sub_heading_id = $txtdom = $active_modules[$key]['rawname'];
 	if ($active_modules[$key]['rawname'] != 'core' || ($quietmode && !isset($_REQUEST[$sub_heading_id]))) {
 		continue; // we just want core
@@ -69,11 +69,11 @@ foreach ($full_list as $key => $value) {
 	$html_txt_arr[$sub_heading] .=  "<td colspan=\"2\" align=\"center\"><strong>".$followme."</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td colspan=\"4\" align=\"center\"><strong>".$callstatus."</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "</tr><td></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>".$status."</strong></td>";	
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>1 Busy</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>1 Unavailable</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>2 Busy</strong></td>";
-	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>2 Unavailable</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>".$status."</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Busy</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Unavail</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Press 1</strong></td>";
+	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Press 2</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>FM</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>FM-list</strong></td>";
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>CW</strong></td>";
@@ -82,55 +82,67 @@ foreach ($full_list as $key => $value) {
 	$html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>CFU</strong></td></tr>\n";
 
 	foreach ($value as $exten => $item) {
+		$vmxbusy = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
+		$vmxunavail = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
 		$description = explode(":",$item['description'],2);	
 		$html_txt_arr[$sub_heading] .= "<tr><td><a href=\"".$item['edit_url']."\" class=\"info\">".$exten."<span>".(trim($description[1])==''?$exten:$description[1])."</span></a></td>";
-		// Is VmX enabled?
-		if ( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/state']) && $ampuser['/AMPUSER/'.$exten.'/vmx/busy/state']== "enabled" ) { 
-		    $color = "\"BLACK\"";
-		    $vmxstate = "<img src=\"images/accept.png\" alt=\"On\"/>";
-		} else { 
-		    $color = "\"GREY\"";
+		// Is VmX enabled, check only busy, if VmX is enabled, we have either "disabled", "enabled" or "blocked" in one of the states.
+		if ( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/state'])) {
+		    // We have one of the states, if it is "blocked", set proper icon
+		    if ($ampuser['/AMPUSER/'.$exten.'/vmx/busy/state'] == "blocked" ) {
+			$vmxstate = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
+			$vmxcolor = "\"GREY\"";
+		    } else {
+			$vmxstate = "<img src=\"images/accept.png\" alt=\"On\"/>";
+		    };
+		    // Get the states of the VmX, we have either Busy or Unavailable enabled
+		    if ($ampuser['/AMPUSER/'.$exten.'/vmx/busy/state'] == "enabled") {
+			$vmxbusy = "<img src=\"images/accept.png\" alt=\"On\"/>";
+		    } else {
+			$vmxbusy = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
+		    };
+		    if ($ampuser['/AMPUSER/'.$exten.'/vmx/unavail/state'] == "enabled") {
+			$vmxunavail = "<img src=\"images/accept.png\" alt=\"On\"/>";
+		    } else {
+
+		    };
+		    // Do we have a VmX Busy/Unavail for 1? We only need to check one, as the number is the same for busy and unavail
+		    if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext'])) {
+		        $vmxone = $ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext'];
+		    } else {
+		    	 $vmxone = "";
+		    }
+		    // Do we have a VmX Busy/Unavailable for 2?
+		    if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/2/ext'])) {
+		        $vmxtwo = $ampuser['/AMPUSER/'.$exten.'/vmx/busy/2/ext'];
+		    } else {
+		    	$vmxtwo = "";
+		    }
+		 } else { 
 		    $vmxstate = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
-		} ;
-		// Do we have a VmX Busy for 1?
-		if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext'])) {
-		    $vmxb1 = $ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext'];
-		} else {
-		    $vmxb1 = "";
-		    }
-		// Do we have a VmX Unavail for 1?
-		if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/unavail/1/ext'])) {
-		    $vmxu1 = $ampuser['/AMPUSER/'.$exten.'/vmx/unavail/1/ext'];
-		} else {
-		    $vmxu1 = "";
-		    }
-		// Do we have a VmX Busy for 2?
-		if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/2/ext'])) {
-		    $vmxb2 = $ampuser['/AMPUSER/'.$exten.'/vmx/busy/1/ext'];
-		} else {
-		    $vmxb2 = "";
-		    }
-		// Do we have a VmX Unavail for 2?
-		if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/unavail/2/ext'])) {
-		    $vmxu2 = $ampuser['/AMPUSER/'.$exten.'/vmx/unavail/1/ext'];
-		} else {
-		    $vmxu2 = "";
-		    }
+		    $vmxone = $vmxtwo = "";
+		    };
 		
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxstate."</td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$vmxb1."</font></td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$vmxu1."</font></td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$vmxb2."</font></td>";
-		$html_txt_arr[$sub_heading] .= "<td><font color=".$color.">".$vmxu2."</font></td>";
-		// Has the exten followme enabled?
-		    if( isset($ampuser['/AMPUSER/'.$exten.'/followme/ddial']) && $ampuser['/AMPUSER/'.$exten.'/followme/ddial'] == "DIRECT" || $followme == "EXTENSION") { 
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxbusy."</td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxunavail."</td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$vmxcolor.">".$vmxone."</font></td>";
+		$html_txt_arr[$sub_heading] .= "<td><font color=".$vmxcolor.">".$vmxtwo."</font></td>";
+		// Has the extension followme enabled?
+		    $fm = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
+		    $fmstate = false;
+		    if( isset($ampuser['/AMPUSER/'.$exten.'/followme/ddial'])) {
+			if( $ampuser['/AMPUSER/'.$exten.'/followme/ddial'] == "DIRECT" || $ampuser['/AMPUSER/'.$exten.'/followme/ddial'] == "EXTENSION") { 
 			$fm = "<img src=\"images/accept.png\" alt=\"On\"/>";
-		    } else { 
-			$fm = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
+			$fmstate = true;
+			} else { 
+			    $fm = "<img src=\"images/cancel.png\" alt=\"Off\"/>";
+			    $fmstate = false;
+			}
 		    }
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$fm."</td>";
 		// If follow-me is enabled, get the follow-me list
-		if($fm == "On") {
+		if($fmstate) {
 			$fmlist = str_replace("-","<br>",$ampuser['/AMPUSER/'.$exten.'/followme/grplist']);
 		} else {
 		    $fmlist = "";
