@@ -1,5 +1,6 @@
 <module>
 	<rawname>extensionsettings</rawname>
+	<repo>extended</repo>
 	<name>Extension Settings</name>
 	<version>2.9.0.0</version>
 	<publisher>Mikael Carlsson</publisher>
