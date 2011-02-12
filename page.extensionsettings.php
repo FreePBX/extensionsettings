@@ -49,6 +49,8 @@ $cfsetting = $astman->database_show("CF");
 $cfbsetting = $astman->database_show("CFB");
 // get all CFU settings
 $cfusetting = $astman->database_show("CFU");
+// get all DND settings
+$dndsetting = $astman->database_show("DND");
 
 foreach ($full_list as $key => $value) {
   $vmxcolor = "BLACK;\"";
@@ -68,7 +70,7 @@ foreach ($full_list as $key => $value) {
   $html_txt_arr[$sub_heading] .=  "<tr><td><strong>".$extension."</strong></td>";
   $html_txt_arr[$sub_heading] .=  "<td colspan=\"7\" align=\"center\"><strong>".$vmxlocator."</strong></td>";
   $html_txt_arr[$sub_heading] .=  "<td colspan=\"2\" align=\"center\"><strong>".$followme."</strong></td>";
-  $html_txt_arr[$sub_heading] .=  "<td colspan=\"4\" align=\"center\"><strong>".$callstatus."</strong></td>";
+  $html_txt_arr[$sub_heading] .=  "<td colspan=\"5\" align=\"center\"><strong>".$callstatus."</strong></td>";
   $html_txt_arr[$sub_heading] .=  "</tr><td>&nbsp;</td>";
   $html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>".$status."</strong></td>";
   $html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>Busy</strong></td>";
@@ -80,6 +82,7 @@ foreach ($full_list as $key => $value) {
   $html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>FM</strong></td>";
   $html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>FM-list</strong></td>";
   $html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>CW</strong></td>";
+  $html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>DND</strong></td>";
   $html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>CF</strong></td>";
   $html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>CFB</strong></td>";
   $html_txt_arr[$sub_heading] .=  "<td align=\"center\"><strong>CFU</strong></td></tr>\n";
@@ -95,16 +98,16 @@ foreach ($full_list as $key => $value) {
       // We have one of the states, if it is "blocked", set proper icon
       if ($ampuser['/AMPUSER/'.$exten.'/vmx/busy/state'] == "blocked" ) {
         $vmxstate = "<img src=\"images/bullet.png\" alt=\"Off\" title=\"Off\"/>";
-				//$vmxcolor = "\"RED\"";
+        //$vmxcolor = "\"RED\"";
         $vmxcolor = "GREY;\"";
       } else {
         $vmxstate = "<img src=\"images/bullet_checked.png\" alt=\"On\" title=\"On\"/>";
       }
-			// Get the states of the VmX, we have either Busy or Unavailable enabled
+      // Get the states of the VmX, we have either Busy or Unavailable enabled
       if ($ampuser['/AMPUSER/'.$exten.'/vmx/busy/state'] == "enabled") {
         $vmxbusy = "<img src=\"images/bullet_checked.png\" alt=\"On\" title=\"On\"/>";
       } else {
-        $vmxbusy = "<img src=\"images/bullet.png\" alt=\"Off\" title=\"On\"/>";
+        $vmxbusy = "<img src=\"images/bullet.png\" alt=\"Off\" title=\"Off\"/>";
       }
       if ($ampuser['/AMPUSER/'.$exten.'/vmx/unavail/state'] == "enabled") {
         $vmxunavail = "images/bullet_checked.png\" alt=\"On\" title=\"On";
@@ -167,16 +170,21 @@ foreach ($full_list as $key => $value) {
     $fmlist = "";
     $rows   = "1";
 		}
-    $html_txt_arr[$sub_heading] .= "<td align=\"center\"><textarea id=\"fm".$exten."\" cols=\"15\" rows=\"".$rows."\" name=\"fm".$exten."\">".$fmlist."</textarea></td>";
+    $html_txt_arr[$sub_heading] .= "<td align=\"center\"><textarea id=\"fm".$exten."\" cols=\"12\" rows=\"".$rows."\" name=\"fm".$exten."\">".$fmlist."</textarea></td>";
     $fmlist = ""; // Empty the list
     // Now get CW, CF, CFB and CFU if set
     if( isset($cwsetting['/CW/'.$exten]) && $cwsetting['/CW/'.$exten] == "ENABLED" ) {
       $cw = "<img src=\"images/bullet_checked.png\" alt=\"On\" title=\"On\"/>";
-		} else {
+    } else {
       $cw = "<img src=\"images/bullet.png\" alt=\"Off\" title=\"Off\"/>";
     }
+    if( isset($dndsetting['/DND/'.$exten]) && $dndsetting['/DND/'.$exten] == "ENABLED" ) {
+      $dnd = "<img src=\"images/bullet_checked.png\" alt=\"On\" title=\"On\"/>";
+    } else {
+      $dnd = "<img src=\"images/bullet.png\" alt=\"Off\" title=\"Off\"/>";
+    }
     if( isset($cfsetting['/CF/'.$exten])) {
-			$cf = $cfsetting['/CF/'.$exten];
+      $cf = $cfsetting['/CF/'.$exten];
     } else {
       $cf = "";
     }
@@ -191,9 +199,10 @@ foreach ($full_list as $key => $value) {
       $cfu = "";
     }
     $html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cw."</td>";
-		$html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"text\" name=\"cf".$exten."\" size=\"15\" value=\"".$cf."\"</td>";
-    $html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"text\" name=\"cfb".$exten."\" size=\"15\" value=\"".$cfb."\"</td>";
-    $html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"text\" name=\"cfu".$exten."\" size=\"15\" value=\"".$cfu."\"</td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$dnd."</td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"text\" name=\"cf".$exten."\" size=\"12\" value=\"".$cf."\"</td>";
+    $html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"text\" name=\"cfb".$exten."\" size=\"12\" value=\"".$cfb."\"</td>";
+    $html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"text\" name=\"cfu".$exten."\" size=\"12\" value=\"".$cfu."\"</td>";
     $html_txt_arr[$sub_heading] .= "</tr>\n";
   }
   $html_txt_arr[$sub_heading] .= "</table></div>";
