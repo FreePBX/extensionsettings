@@ -145,9 +145,9 @@ foreach ($full_list as $key => $value) {
     $html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"image\" src=\"".$vmxunavail."\" id=\"vmxu".$exten."\" onClick=\"return confirm('Clicked button')\"></td>";
 		// $html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxoperator."</td>";
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"image\" src=\"".$vmxoperator."\" id=\"vmxop".$exten."\" onClick=\"return confirm('Clicked button')\"></td>";
-    $html_txt_arr[$sub_heading] .= "<td><input type=\"text\" id=\"vmxz".$exten."\" name=\"vmxz".$exten."\" size=\"15\" value=\"".$vmxzero."\" style=\"color:".$vmxcolor."></td>";
-    $html_txt_arr[$sub_heading] .= "<td><input type=\"text\" name=\"vmxo".$exten."\" size=\"15\" value=\"".$vmxone."\" style=\"color:".$vmxcolor."></td>";
-		$html_txt_arr[$sub_heading] .= "<td><input type=\"text\" name=\"vmxt".$exten."\" size=\"15\" value=\"".$vmxtwo."\" style=\"color:".$vmxcolor."></td>";
+    $html_txt_arr[$sub_heading] .= "<td><input type=\"text\" id=\"vmxz".$exten."\" name=\"vmxz".$exten."\" size=\"12\" value=\"".$vmxzero."\" style=\"color:".$vmxcolor."></td>";
+    $html_txt_arr[$sub_heading] .= "<td><input type=\"text\" name=\"vmxo".$exten."\" size=\"12\" value=\"".$vmxone."\" style=\"color:".$vmxcolor."></td>";
+		$html_txt_arr[$sub_heading] .= "<td><input type=\"text\" name=\"vmxt".$exten."\" size=\"12\" value=\"".$vmxtwo."\" style=\"color:".$vmxcolor."></td>";
     // Has the extension followme enabled?
     $fm = "<img src=\"images/bullet.png\" alt=\"Off\" title=\"Off\"/>";
     $fmstate = false;
@@ -178,7 +178,7 @@ foreach ($full_list as $key => $value) {
     } else {
       $cw = "<img src=\"images/bullet.png\" alt=\"Off\" title=\"Off\"/>";
     }
-    if( isset($dndsetting['/DND/'.$exten]) && $dndsetting['/DND/'.$exten] == "ENABLED" ) {
+    if( isset($dndsetting['/DND/'.$exten]) && $dndsetting['/DND/'.$exten] == "YES" ) {
       $dnd = "<img src=\"images/bullet_checked.png\" alt=\"On\" title=\"On\"/>";
     } else {
       $dnd = "<img src=\"images/bullet.png\" alt=\"Off\" title=\"Off\"/>";
