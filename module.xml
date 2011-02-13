@@ -14,5 +14,6 @@
 	<changelog>
 		*2.9.0.0* First release, display all settings
 	</changelog>
-	<md5sum>edabe051394a01e3e342e07200c0d2ea</md5sum>
+	<md5sum>09870a995725f315d934825c1a7a4413</md5sum>
+	<location>release/2.9/extensionsettings-2.9.0.0.tgz</location>
 </module>
