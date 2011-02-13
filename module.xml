@@ -12,7 +12,7 @@
 		<extensionsettings>Extension Settings</extensionsettings>
 	</menuitems>
 	<changelog>
-		*2.9.0.0* Work In Progress, no release, just a repository for the code
+		*2.9.0.0* First release, display all settings
 	</changelog>
 	<md5sum>edabe051394a01e3e342e07200c0d2ea</md5sum>
 </module>

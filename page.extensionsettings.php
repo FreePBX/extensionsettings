@@ -1,6 +1,6 @@
 <?php /* $Id */
 // Copyright (C) 2008 Philippe Lindheimer & Bandwidth.com (plindheimer at bandwidth dot com)
-// Copyright (C) 2010 Mikael Carlsson (mickecarlsson at gmail dot com)
+// Copyright (C) 2011 Mikael Carlsson (mickecarlsson at gmail dot com)
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
@@ -15,13 +15,9 @@
 // TODO:
 // Localization
 // get all settings from astdb for extensions - DONE
-// make all toggles clickable so they can be changed here
-// like, click on CW ON or OFF to toggle state, perhaps an image?
-// same for VmX, enable or disable, or if time permits, change destinations, who knows, time is the limit
-// Change the table so it has colors, perhaps make it scrollable with the headers intact??
-// and a dozen other things that I can think of.
-//
-// Make columns selectable as in printextensions, selection for VmX, Follow-Me and Call status
+// click on bulltest/checks toggle state
+// same for VmX, enable or disable, or if time permits, change destinations
+// make table scrollable with the headers intact
 
 $dispnum = 'extensionsettings';
 $extension = _("Extension");
@@ -141,13 +137,11 @@ foreach ($full_list as $key => $value) {
 
     $html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxstate."</td>";
     $html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxbusy."</td>";
-		// $html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxunavail."</td>";
-    $html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"image\" src=\"".$vmxunavail."\" id=\"vmxu".$exten."\" onClick=\"return confirm('Clicked button')\"></td>";
-		// $html_txt_arr[$sub_heading] .= "<td align=\"center\">".$vmxoperator."</td>";
-		$html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"image\" src=\"".$vmxoperator."\" id=\"vmxop".$exten."\" onClick=\"return confirm('Clicked button')\"></td>";
-    $html_txt_arr[$sub_heading] .= "<td><input type=\"text\" id=\"vmxz".$exten."\" name=\"vmxz".$exten."\" size=\"12\" value=\"".$vmxzero."\" style=\"color:".$vmxcolor."></td>";
-    $html_txt_arr[$sub_heading] .= "<td><input type=\"text\" name=\"vmxo".$exten."\" size=\"12\" value=\"".$vmxone."\" style=\"color:".$vmxcolor."></td>";
-		$html_txt_arr[$sub_heading] .= "<td><input type=\"text\" name=\"vmxt".$exten."\" size=\"12\" value=\"".$vmxtwo."\" style=\"color:".$vmxcolor."></td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\"><img src=\"".$vmxunavail."\"></td>";
+		$html_txt_arr[$sub_heading] .= "<td align=\"center\"><img src=\"".$vmxoperator."\"></td>";
+    $html_txt_arr[$sub_heading] .= "<td>".$vmxzero."</td>";
+    $html_txt_arr[$sub_heading] .= "<td>".$vmxone."</td>";
+		$html_txt_arr[$sub_heading] .= "<td>".$vmxtwo."</td>";
     // Has the extension followme enabled?
     $fm = "<img src=\"images/bullet.png\" alt=\"Off\" title=\"Off\"/>";
     $fmstate = false;
@@ -163,14 +157,11 @@ foreach ($full_list as $key => $value) {
     $html_txt_arr[$sub_heading] .= "<td align=\"center\">".$fm."</td>";
     // If follow-me is enabled, get the follow-me list
     if($fmstate) {
-      $fmlist = str_replace("-","\n",$ampuser['/AMPUSER/'.$exten.'/followme/grplist']);
-			$rows = count($fmlist)+1;
-      ($rows < 3) ? 2 : (($rows > 20) ? 20 : $rows);
+      $fmlist = str_replace("-","<br>",$ampuser['/AMPUSER/'.$exten.'/followme/grplist']);
     } else {
     $fmlist = "";
-    $rows   = "1";
 		}
-    $html_txt_arr[$sub_heading] .= "<td align=\"center\"><textarea id=\"fm".$exten."\" cols=\"12\" rows=\"".$rows."\" name=\"fm".$exten."\">".$fmlist."</textarea></td>";
+    $html_txt_arr[$sub_heading] .= "<td>".$fmlist."</td>";
     $fmlist = ""; // Empty the list
     // Now get CW, CF, CFB and CFU if set
     if( isset($cwsetting['/CW/'.$exten]) && $cwsetting['/CW/'.$exten] == "ENABLED" ) {
@@ -200,9 +191,9 @@ foreach ($full_list as $key => $value) {
     }
     $html_txt_arr[$sub_heading] .= "<td align=\"center\">".$cw."</td>";
 		$html_txt_arr[$sub_heading] .= "<td align=\"center\">".$dnd."</td>";
-		$html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"text\" name=\"cf".$exten."\" size=\"12\" value=\"".$cf."\"</td>";
-    $html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"text\" name=\"cfb".$exten."\" size=\"12\" value=\"".$cfb."\"</td>";
-    $html_txt_arr[$sub_heading] .= "<td align=\"center\"><input type=\"text\" name=\"cfu".$exten."\" size=\"12\" value=\"".$cfu."\"</td>";
+		$html_txt_arr[$sub_heading] .= "<td>".$cf."</td>";
+    $html_txt_arr[$sub_heading] .= "<td>".$cfb."</td>";
+    $html_txt_arr[$sub_heading] .= "<td>".$cfu."</td>";
     $html_txt_arr[$sub_heading] .= "</tr>\n";
   }
   $html_txt_arr[$sub_heading] .= "</table></div>";
