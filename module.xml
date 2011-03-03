@@ -9,7 +9,7 @@
 	<category>Basic</category>
 	<description>Creates a list of all extensions and their current settings for CW, CF, CFB, CFU, VMXB and VMXU</description>
 	<menuitems>
-		<extensionsettings>Extension Settings</extensionsettings>
+		<extensionsettings sort="4">Extension Settings</extensionsettings>
 	</menuitems>
 	<changelog>
 		*2.9.0.0* First release, display all settings
