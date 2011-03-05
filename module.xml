@@ -1,6 +1,6 @@
 <module>
 	<rawname>extensionsettings</rawname>
-	<repo>extended</repo>
+	<repo>unsupported</repo>
 	<name>Extension Settings</name>
 	<version>2.9.0.0</version>
 	<publisher>Mikael Carlsson</publisher>
@@ -14,6 +14,6 @@
 	<changelog>
 		*2.9.0.0* First release, display all settings
 	</changelog>
-	<md5sum>218fdc1ddca51430c620161190dc4b24</md5sum>
+	<md5sum>62318f2718970545d8b33531d3142682</md5sum>
 	<location>release/2.9/extensionsettings-2.9.0.0.tgz</location>
 </module>
