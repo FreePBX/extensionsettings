@@ -2,7 +2,7 @@
 	<rawname>extensionsettings</rawname>
 	<repo>unsupported</repo>
 	<name>Extension Settings</name>
-	<version>2.9.0.0</version>
+	<version>2.10.0.0</version>
 	<publisher>Mikael Carlsson</publisher>
 	<license>GPLv2</license>
 	<category>Settings</category>
@@ -11,8 +11,9 @@
 		<extensionsettings>Extension Settings</extensionsettings>
 	</menuitems>
 	<changelog>
+		*2.10.0.0* new version changes
 		*2.9.0.0* First release, display all settings
 	</changelog>
-	<md5sum>62318f2718970545d8b33531d3142682</md5sum>
-	<location>release/2.9/extensionsettings-2.9.0.0.tgz</location>
+	<md5sum>64b37af80043f0d5dc135cc2c2ada91b</md5sum>
+	<location>release/2.10/extensionsettings-2.10.0.0.tgz</location>
 </module>
