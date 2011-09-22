@@ -196,7 +196,7 @@ foreach ($full_list as $key => $value) {
     $html_txt_arr[$sub_heading] .= "<td>".$cfu."</td>";
     $html_txt_arr[$sub_heading] .= "</tr>\n";
   }
-  $html_txt_arr[$sub_heading] .= "</table></div>";
+  $html_txt_arr[$sub_heading] .= "</table>";
 }
 
 function core_top($a, $b) {
