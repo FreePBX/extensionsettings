@@ -55,11 +55,10 @@ foreach ($full_list as $key => $value) {
     continue; // we just want core
   }
   if ($txtdom == 'core') {
-    $txtdom = 'amp';
     $active_modules[$key]['name'] = 'Extensions';
-    $core_heading = $sub_heading =  dgettext($txtdom,$active_modules[$key]['name']);
+    $core_heading = $sub_heading =  modgettext::_($active_modules[$key]['name'], $txtdom);
   } else {
-    $sub_heading =  dgettext($txtdom,$active_modules[$key]['name']);
+    $sub_heading =  modgettext::_($active_modules[$key]['name'], $txtdom);
   }
   $module_select[$sub_heading_id] = $sub_heading;
   $html_txt_arr[$sub_heading] =   "<div class=\"$sub_heading_id\"><table id=\"set_table\" border=\"0\" width=\"85%\"><tr>";
