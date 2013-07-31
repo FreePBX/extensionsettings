@@ -17,6 +17,6 @@
 		*2.10.0.0* new version changes
 		*2.9.0.0* First release, display all settings
 	</changelog>
-	<md5sum>03cc07976767b7535d7d1d06d1e8cd59</md5sum>
-	<location>release/2.10/extensionsettings-2.10.0.2.tgz</location>
+	<md5sum>cee0a2169cb1c3b9d68f9e9714933ee3</md5sum>
+	<location>release/2.11/extensionsettings-2.11.0.0.tgz</location>
 </module>
