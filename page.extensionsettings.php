@@ -88,6 +88,7 @@ foreach ($full_list as $key => $value) {
     $vmxbusy = "<img src=\"images/bullet.png\" alt=\"Off\" title=\"Off\"/>";
     $vmxunavail = "images/bullet.png\" alt=\"Off\" title=\"Off";
     $description = explode(":",$item['description'],2);
+	$exten = " ".$exten;
     $html_txt_arr[$sub_heading] .= "<tr><td><a href=\"".$item['edit_url']."\" class=\"info\">".$exten."<span>".(trim($description[1])==''?$exten:$description[1])."</span></a></td>";
     // Is VmX enabled, check only busy, if VmX is enabled, we have either "disabled", "enabled" or "blocked" in one of the states.
     if ( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/state'])) {
