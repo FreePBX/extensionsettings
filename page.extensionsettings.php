@@ -88,7 +88,11 @@ foreach ($full_list as $key => $value) {
     $vmxbusy = "<img src=\"images/bullet.png\" alt=\"Off\" title=\"Off\"/>";
     $vmxunavail = "images/bullet.png\" alt=\"Off\" title=\"Off";
     $description = explode(":",$item['description'],2);
-	$exten = " ".$exten;
+	//Hack for PHP 5.3 negative number key issue
+	//https://bugs.php.net/bug.php?id=51008
+	preg_match('/display=(\d+)&/i',$item['edit_url'],$matches);
+	$exten = !empty($matches[1]) ? $matches[1] : $exten;
+	//end hack
     $html_txt_arr[$sub_heading] .= "<tr><td><a href=\"".$item['edit_url']."\" class=\"info\">".$exten."<span>".(trim($description[1])==''?$exten:$description[1])."</span></a></td>";
     // Is VmX enabled, check only busy, if VmX is enabled, we have either "disabled", "enabled" or "blocked" in one of the states.
     if ( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/state'])) {
