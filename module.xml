@@ -19,4 +19,4 @@
 	</changelog>
 	<md5sum>cee0a2169cb1c3b9d68f9e9714933ee3</md5sum>
 	<location>release/2.11/extensionsettings-2.11.0.0.tgz</location>
-</module>
+<supported><version>2.11</version></supported></module>
