@@ -2,15 +2,17 @@
   <rawname>extensionsettings</rawname>
   <repo>unsupported</repo>
   <name>Extension Settings</name>
-  <version>2.11.0.2</version>
-  <publisher>Mikael Carlsson</publisher>
-  <license>GPLv2</license>
+  <version>2.11.0.3</version>
+  <publisher>Schmooze Com Inc</publisher>
+  <license>GPLv3+</license>
+  <licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
   <category>Settings</category>
   <description>Creates a list of all extensions and their current settings for CW, CF, CFB, CFU, VMXB and VMXU</description>
   <menuitems>
     <extensionsettings>Extension Settings</extensionsettings>
   </menuitems>
   <changelog>
+  		*2.11.0.3* Include license file
 		*2.11.0.2* Real fix for #6101
 		*2.11.0.1* Attempt to fix #6101
 		*2.11.0.0* bump version

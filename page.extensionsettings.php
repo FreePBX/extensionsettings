@@ -1,24 +1,9 @@
 <?php /* $Id */
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
-// Copyright (C) 2008 Philippe Lindheimer & Bandwidth.com (plindheimer at bandwidth dot com)
-// Copyright (C) 2011 Mikael Carlsson (mickecarlsson at gmail dot com)
+//	License for all code of this FreePBX module can be found in the license file inside the module directory
+//	Copyright 2013 Schmooze Com Inc.
+//  Copyright (C) 2011 Mikael Carlsson (mickecarlsson at gmail dot com)
 //
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation, version 2
-// of the License.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// TODO:
-// Localization
-// get all settings from astdb for extensions - DONE
-// click on bulltest/checks toggle state
-// same for VmX, enable or disable, or if time permits, change destinations
-// make table scrollable with the headers intact
 
 $dispnum = 'extensionsettings';
 $extension = _("Extension");
