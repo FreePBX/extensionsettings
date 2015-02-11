@@ -20,45 +20,51 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-31 12:10-0400\n"
+"POT-Creation-Date: 2015-02-11 17:52-0500\n"
 "PO-Revision-Date: 2014-07-22 15:40+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
-"Language-Team: Bulgarian "
-"<http://git.freepbx.org/projects/freepbx/extensionsettings/bg/>\n"
-"Language: bg\n"
+"Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/"
+"extensionsettings/bg/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: bg\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 1.10-dev\n"
 
-msgid "Extension Settings"
-msgstr "Настройки на Вътрешна Линия"
-
-msgid "Settings"
-msgstr "Настройки"
-
-msgid ""
-"Creates a list of all extensions and their current settings for CW, CF, CFB, "
-"CFU, VMXB and VMXU"
-msgstr ""
-"Създава списък с всички вътрешни линии и техните текущи настройки за CW, CF, "
-"CFB, CFU, VMXB и VMXU"
-
-msgid "Extension"
-msgstr "Вътрешна Линия"
-
-msgid "VmX Locator"
-msgstr "VmX Локатор"
-
-msgid "Follow-Me"
-msgstr "Следвай Ме"
-
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:12
 msgid "Call status"
 msgstr "Състояние на разговора"
 
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:9
+msgid "Extension"
+msgstr "Вътрешна Линия"
+
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:11
+msgid "Follow-Me"
+msgstr "Следвай Ме"
+
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:20
+msgid "FreePBX Extension Settings"
+msgstr "FreePBX Настройки на Вътрешна Линия"
+
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:13
 msgid "Status"
 msgstr "Състояние"
 
-msgid "FreePBX Extension Settings"
-msgstr "FreePBX Настройки на Вътрешна Линия"
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:10
+msgid "VmX Locator"
+msgstr "VmX Локатор"
+
+#~ msgid "Extension Settings"
+#~ msgstr "Настройки на Вътрешна Линия"
+
+#~ msgid "Settings"
+#~ msgstr "Настройки"
+
+#~ msgid ""
+#~ "Creates a list of all extensions and their current settings for CW, CF, "
+#~ "CFB, CFU, VMXB and VMXU"
+#~ msgstr ""
+#~ "Създава списък с всички вътрешни линии и техните текущи настройки за CW, "
+#~ "CF, CFB, CFU, VMXB и VMXU"

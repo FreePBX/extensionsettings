@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-30 00:04+0400\n"
+"POT-Creation-Date: 2015-02-11 17:52-0500\n"
 "PO-Revision-Date: 2012-11-02 13:33+0400\n"
 "Last-Translator: root <ceo@postmet.com>\n"
 "Language-Team: Russian\n"
@@ -30,33 +30,39 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-msgid "Extension Settings"
-msgstr "Настройки внутренних номеров"
-
-msgid "Settings"
-msgstr "Настройки"
-
-msgid ""
-"Creates a list of all extensions and their current settings for CW, CF, CFB, "
-"CFU, VMXB and VMXU"
-msgstr ""
-"Создает список всех внутренних номеров и их текущих настроек для CW, CF, CFB, "
-"CFU, VMXB и VMXU "
-
-msgid "Extension"
-msgstr "Внутренний номер"
-
-msgid "VmX Locator"
-msgstr "VmX локатор"
-
-msgid "Follow-Me"
-msgstr "Следуйте сюда"
-
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:12
 msgid "Call status"
 msgstr "Статус вызова"
 
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:9
+msgid "Extension"
+msgstr "Внутренний номер"
+
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:11
+msgid "Follow-Me"
+msgstr "Следуйте сюда"
+
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:20
+msgid "FreePBX Extension Settings"
+msgstr "Настройка внутренних номеров FreePBX"
+
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:13
 msgid "Status"
 msgstr "Статус"
 
-msgid "FreePBX Extension Settings"
-msgstr "Настройка внутренних номеров FreePBX"
+#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:10
+msgid "VmX Locator"
+msgstr "VmX локатор"
+
+#~ msgid "Extension Settings"
+#~ msgstr "Настройки внутренних номеров"
+
+#~ msgid "Settings"
+#~ msgstr "Настройки"
+
+#~ msgid ""
+#~ "Creates a list of all extensions and their current settings for CW, CF, "
+#~ "CFB, CFU, VMXB and VMXU"
+#~ msgstr ""
+#~ "Создает список всех внутренних номеров и их текущих настроек для CW, CF, "
+#~ "CFB, CFU, VMXB и VMXU "
