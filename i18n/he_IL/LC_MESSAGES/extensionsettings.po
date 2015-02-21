@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 17:52-0500\n"
+"POT-Creation-Date: 2015-02-20 19:29-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,26 +28,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:12
+#: page.extensionsettings.php:12
 msgid "Call status"
 msgstr ""
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:9
+#: extensionsettings.i18n.php:5
+msgid ""
+"Creates a list of all extensions and their current settings for CW, CF, CFB, "
+"CFU, VMXB and VMXU"
+msgstr ""
+
+#: page.extensionsettings.php:9
 msgid "Extension"
 msgstr ""
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:11
+#: extensionsettings.i18n.php:3 extensionsettings.i18n.php:6
+msgid "Extension Settings"
+msgstr ""
+
+#: page.extensionsettings.php:11
 msgid "Follow-Me"
 msgstr ""
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:20
+#: page.extensionsettings.php:20
 msgid "FreePBX Extension Settings"
 msgstr ""
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:13
+#: extensionsettings.i18n.php:4
+msgid "Settings"
+msgstr ""
+
+#: page.extensionsettings.php:13
 msgid "Status"
 msgstr ""
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:10
+#: page.extensionsettings.php:10
 msgid "VmX Locator"
 msgstr ""

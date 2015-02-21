@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 17:52-0500\n"
+"POT-Creation-Date: 2015-02-20 19:29-0500\n"
 "PO-Revision-Date: 2014-07-22 15:40+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/"
@@ -32,39 +32,42 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 1.10-dev\n"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:12
+#: page.extensionsettings.php:12
 msgid "Call status"
 msgstr "Състояние на разговора"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:9
+#: extensionsettings.i18n.php:5
+msgid ""
+"Creates a list of all extensions and their current settings for CW, CF, CFB, "
+"CFU, VMXB and VMXU"
+msgstr ""
+"Създава списък с всички вътрешни линии и техните текущи настройки за CW, CF, "
+"CFB, CFU, VMXB и VMXU"
+
+#: page.extensionsettings.php:9
 msgid "Extension"
 msgstr "Вътрешна Линия"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:11
+#: extensionsettings.i18n.php:3 extensionsettings.i18n.php:6
+msgid "Extension Settings"
+msgstr "Настройки на Вътрешна Линия"
+
+#: page.extensionsettings.php:11
 msgid "Follow-Me"
 msgstr "Следвай Ме"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:20
+#: page.extensionsettings.php:20
 msgid "FreePBX Extension Settings"
 msgstr "FreePBX Настройки на Вътрешна Линия"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:13
+#: extensionsettings.i18n.php:4
+msgid "Settings"
+msgstr "Настройки"
+
+#: page.extensionsettings.php:13
 msgid "Status"
 msgstr "Състояние"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:10
+#: page.extensionsettings.php:10
 msgid "VmX Locator"
 msgstr "VmX Локатор"
-
-#~ msgid "Extension Settings"
-#~ msgstr "Настройки на Вътрешна Линия"
-
-#~ msgid "Settings"
-#~ msgstr "Настройки"
-
-#~ msgid ""
-#~ "Creates a list of all extensions and their current settings for CW, CF, "
-#~ "CFB, CFU, VMXB and VMXU"
-#~ msgstr ""
-#~ "Създава списък с всички вътрешни линии и техните текущи настройки за CW, "
-#~ "CF, CFB, CFU, VMXB и VMXU"

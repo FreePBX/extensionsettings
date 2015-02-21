@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 17:52-0500\n"
+"POT-Creation-Date: 2015-02-20 19:29-0500\n"
 "PO-Revision-Date: 2012-11-02 13:33+0400\n"
 "Last-Translator: root <ceo@postmet.com>\n"
 "Language-Team: Russian\n"
@@ -30,39 +30,42 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:12
+#: page.extensionsettings.php:12
 msgid "Call status"
 msgstr "Статус вызова"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:9
+#: extensionsettings.i18n.php:5
+msgid ""
+"Creates a list of all extensions and their current settings for CW, CF, CFB, "
+"CFU, VMXB and VMXU"
+msgstr ""
+"Создает список всех внутренних номеров и их текущих настроек для CW, CF, "
+"CFB, CFU, VMXB и VMXU "
+
+#: page.extensionsettings.php:9
 msgid "Extension"
 msgstr "Внутренний номер"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:11
+#: extensionsettings.i18n.php:3 extensionsettings.i18n.php:6
+msgid "Extension Settings"
+msgstr "Настройки внутренних номеров"
+
+#: page.extensionsettings.php:11
 msgid "Follow-Me"
 msgstr "Следуйте сюда"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:20
+#: page.extensionsettings.php:20
 msgid "FreePBX Extension Settings"
 msgstr "Настройка внутренних номеров FreePBX"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:13
+#: extensionsettings.i18n.php:4
+msgid "Settings"
+msgstr "Настройки"
+
+#: page.extensionsettings.php:13
 msgid "Status"
 msgstr "Статус"
 
-#: /usr/src/freepbx/extensionsettings/page.extensionsettings.php:10
+#: page.extensionsettings.php:10
 msgid "VmX Locator"
 msgstr "VmX локатор"
-
-#~ msgid "Extension Settings"
-#~ msgstr "Настройки внутренних номеров"
-
-#~ msgid "Settings"
-#~ msgstr "Настройки"
-
-#~ msgid ""
-#~ "Creates a list of all extensions and their current settings for CW, CF, "
-#~ "CFB, CFU, VMXB and VMXU"
-#~ msgstr ""
-#~ "Создает список всех внутренних номеров и их текущих настроек для CW, CF, "
-#~ "CFB, CFU, VMXB и VMXU "
