@@ -10,48 +10,53 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 19:29-0500\n"
-"PO-Revision-Date: 2015-02-20 19:29-0500\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2015-03-25 04:59+0200\n"
+"Last-Translator: Ernesto <ecasas@sangoma.com>\n"
+"Language-Team: Spanish "
+"<http://weblate.freepbx.org/projects/freepbx/extensionsettings/es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: page.extensionsettings.php:12
 msgid "Call status"
-msgstr ""
+msgstr "Estado de Llamada"
 
 #: extensionsettings.i18n.php:5
 msgid ""
 "Creates a list of all extensions and their current settings for CW, CF, CFB, "
 "CFU, VMXB and VMXU"
 msgstr ""
+"Crea una lista de extensiones y su configuración para CW, CF, CFB, CFU, VMXB "
+"y VMXU"
 
 #: page.extensionsettings.php:9
 msgid "Extension"
-msgstr ""
+msgstr "Extensión"
 
 #: extensionsettings.i18n.php:3 extensionsettings.i18n.php:6
 msgid "Extension Settings"
-msgstr ""
+msgstr "Configuración de Extensión"
 
 #: page.extensionsettings.php:11
 msgid "Follow-Me"
-msgstr ""
+msgstr "Sigue-Me"
 
 #: page.extensionsettings.php:20
 msgid "FreePBX Extension Settings"
-msgstr ""
+msgstr "Configuración de extensión FreePBX"
 
 #: extensionsettings.i18n.php:4
 msgid "Settings"
-msgstr ""
+msgstr "Configuración"
 
 #: page.extensionsettings.php:13
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #: page.extensionsettings.php:10
 msgid "VmX Locator"
-msgstr ""
+msgstr "Localizador VmX"
