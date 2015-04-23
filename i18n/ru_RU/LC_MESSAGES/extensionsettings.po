@@ -21,14 +21,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-20 19:29-0500\n"
-"PO-Revision-Date: 2012-11-02 13:33+0400\n"
-"Last-Translator: root <ceo@postmet.com>\n"
-"Language-Team: Russian\n"
+"PO-Revision-Date: 2015-04-22 20:33+0200\n"
+"Last-Translator: Yuriy <alliancesko@gmail.com>\n"
+"Language-Team: Russian "
+"<http://weblate.freepbx.org/projects/freepbx/extensionsettings/ru_RU/>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: page.extensionsettings.php:12
 msgid "Call status"
@@ -40,7 +43,7 @@ msgid ""
 "CFU, VMXB and VMXU"
 msgstr ""
 "Создает список всех внутренних номеров и их текущих настроек для CW, CF, "
-"CFB, CFU, VMXB и VMXU "
+"CFB, CFU, VMXB и VMXU"
 
 #: page.extensionsettings.php:9
 msgid "Extension"
@@ -56,11 +59,11 @@ msgstr "Следуйте сюда"
 
 #: page.extensionsettings.php:20
 msgid "FreePBX Extension Settings"
-msgstr "Настройка внутренних номеров FreePBX"
+msgstr "Настройки внутренних номеров FreePBX"
 
 #: extensionsettings.i18n.php:4
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Установки"
 
 #: page.extensionsettings.php:13
 msgid "Status"
