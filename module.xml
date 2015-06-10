@@ -2,7 +2,7 @@
   <rawname>extensionsettings</rawname>
   <repo>unsupported</repo>
   <name>Extension Settings</name>
-  <version>2.11.0.3</version>
+  <version>13.0.1alpha1</version>
   <publisher>Schmooze Com Inc</publisher>
   <license>GPLv3+</license>
   <licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -11,8 +11,9 @@
   <menuitems>
     <extensionsettings>Extension Settings</extensionsettings>
   </menuitems>
-  <changelog>
-  		*2.11.0.3* Include license file
+	<changelog>
+		*13.0.1alpha1* Visual styling updates
+  	*2.11.0.3* Include license file
 		*2.11.0.2* Real fix for #6101
 		*2.11.0.1* Attempt to fix #6101
 		*2.11.0.0* bump version
@@ -24,6 +25,6 @@
   <md5sum>c62830a311338fa38b1aa0e9f9284fc3</md5sum>
   <location>release/2.11/extensionsettings-2.11.0.2.tgz</location>
   <supported>
-    <version>2.10</version>
+    <version>13.0</version>
   </supported>
 </module>

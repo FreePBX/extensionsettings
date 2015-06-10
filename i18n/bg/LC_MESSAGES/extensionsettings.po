@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:29-0500\n"
+"POT-Creation-Date: 2015-06-10 13:41-0400\n"
 "PO-Revision-Date: 2014-07-22 15:40+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/"
@@ -36,21 +36,9 @@ msgstr ""
 msgid "Call status"
 msgstr "Състояние на разговора"
 
-#: extensionsettings.i18n.php:5
-msgid ""
-"Creates a list of all extensions and their current settings for CW, CF, CFB, "
-"CFU, VMXB and VMXU"
-msgstr ""
-"Създава списък с всички вътрешни линии и техните текущи настройки за CW, CF, "
-"CFB, CFU, VMXB и VMXU"
-
 #: page.extensionsettings.php:9
 msgid "Extension"
 msgstr "Вътрешна Линия"
-
-#: extensionsettings.i18n.php:3 extensionsettings.i18n.php:6
-msgid "Extension Settings"
-msgstr "Настройки на Вътрешна Линия"
 
 #: page.extensionsettings.php:11
 msgid "Follow-Me"
@@ -60,10 +48,6 @@ msgstr "Следвай Ме"
 msgid "FreePBX Extension Settings"
 msgstr "FreePBX Настройки на Вътрешна Линия"
 
-#: extensionsettings.i18n.php:4
-msgid "Settings"
-msgstr "Настройки"
-
 #: page.extensionsettings.php:13
 msgid "Status"
 msgstr "Състояние"
@@ -71,3 +55,16 @@ msgstr "Състояние"
 #: page.extensionsettings.php:10
 msgid "VmX Locator"
 msgstr "VmX Локатор"
+
+#~ msgid ""
+#~ "Creates a list of all extensions and their current settings for CW, CF, "
+#~ "CFB, CFU, VMXB and VMXU"
+#~ msgstr ""
+#~ "Създава списък с всички вътрешни линии и техните текущи настройки за CW, "
+#~ "CF, CFB, CFU, VMXB и VMXU"
+
+#~ msgid "Extension Settings"
+#~ msgstr "Настройки на Вътрешна Линия"
+
+#~ msgid "Settings"
+#~ msgstr "Настройки"
