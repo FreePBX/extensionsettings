@@ -2,8 +2,8 @@
   <rawname>extensionsettings</rawname>
   <repo>unsupported</repo>
   <name>Extension Settings</name>
-  <version>13.0.1alpha1</version>
-  <publisher>Schmooze Com Inc</publisher>
+  <version>13.0.2</version>
+  <publisher>Sangoma Technologies Corporation</publisher>
   <license>GPLv3+</license>
   <licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
   <category>Settings</category>
@@ -12,12 +12,13 @@
     <extensionsettings>Extension Settings</extensionsettings>
   </menuitems>
 	<changelog>
+    *13.0.2* Remove alpha
 		*13.0.1alpha1* Visual styling updates
   	*2.11.0.3* Include license file
 		*2.11.0.2* Real fix for #6101
 		*2.11.0.1* Attempt to fix #6101
 		*2.11.0.0* bump version
-		*2.10.0.2* #5478 
+		*2.10.0.2* #5478
 		*2.10.0.1* #5463
 		*2.10.0.0* new version changes
 		*2.9.0.0* First release, display all settings
