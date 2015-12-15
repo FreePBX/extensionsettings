@@ -20,6 +20,7 @@ if (!$extdisplay) {
         $html_txt .= '<br><h2>'._("FreePBX Extension Settings").'</h2>';
 }
 $full_list = framework_check_extension_usage(true);
+$full_list = is_array($full_list)?$full_list:array();
 // Dont waste astman calls, get all family keys in one call
 // Get all AMPUSER settings
 $ampuser = $astman->database_show("AMPUSER");
