@@ -10,43 +10,37 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-10 13:41-0400\n"
-"PO-Revision-Date: 2015-11-16 07:21+0200\n"
-"Last-Translator: james <zhulizhong@gmail.com>\n"
-"Language-Team: Simplified Chinese "
-"<http://weblate.freepbx.org/projects/freepbx/extensionsettings/zh_CN/>\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2015-10-11 23:54+0200\n"
+"Last-Translator: Media <mousavi.media@gmail.com>\n"
+"Language-Team: Persian "
+"<http://weblate.freepbx.org/projects/freepbx/extensionsettings/fa/>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
 #: page.extensionsettings.php:12
 msgid "Call status"
-msgstr "呼叫状态"
+msgstr "وضعیت تماس"
 
 #: page.extensionsettings.php:9
 msgid "Extension"
-msgstr "分机"
+msgstr "داخلی"
 
 #: page.extensionsettings.php:11
 msgid "Follow-Me"
-msgstr "分机随行"
+msgstr "مرا دنبال کن"
 
 #: page.extensionsettings.php:20
 msgid "FreePBX Extension Settings"
-msgstr "FreePBX 分机设置"
+msgstr "تنظیمات داخلی برنامه"
 
 #: page.extensionsettings.php:13
 msgid "Status"
-msgstr "状态"
+msgstr "وضعیت"
 
 #: page.extensionsettings.php:10
 msgid "VmX Locator"
-msgstr "VmX 查询器"
-
-#~ msgid "Extension Settings"
-#~ msgstr "分机设置"
-
-#~ msgid "Settings"
-#~ msgstr "设置"
+msgstr ""
