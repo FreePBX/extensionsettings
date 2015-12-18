@@ -2,7 +2,7 @@
   <rawname>extensionsettings</rawname>
   <repo>unsupported</repo>
   <name>Extension Settings</name>
-  <version>13.0.2</version>
+  <version>13.0.3</version>
   <publisher>Sangoma Technologies Corporation</publisher>
   <license>GPLv3+</license>
   <licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,6 +12,7 @@
     <extensionsettings>Extension Settings</extensionsettings>
   </menuitems>
 	<changelog>
+		*13.0.3* FREEPBX-11062
     *13.0.2* Remove alpha
 		*13.0.1alpha1* Visual styling updates
   	*2.11.0.3* Include license file

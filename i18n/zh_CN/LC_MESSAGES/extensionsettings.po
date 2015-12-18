@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-10 13:41-0400\n"
+"POT-Creation-Date: 2015-12-18 12:27-0800\n"
 "PO-Revision-Date: 2015-11-16 07:21+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
-"Language-Team: Simplified Chinese "
-"<http://weblate.freepbx.org/projects/freepbx/extensionsettings/zh_CN/>\n"
-"Language: zh_CN\n"
+"Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
+"freepbx/extensionsettings/zh_CN/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
@@ -25,9 +25,19 @@ msgstr ""
 msgid "Call status"
 msgstr "呼叫状态"
 
+#: extensionsettings.i18n.php:8
+msgid ""
+"Creates a list of all extensions and their current settings for CW, CF, CFB, "
+"CFU, VMXB and VMXU"
+msgstr ""
+
 #: page.extensionsettings.php:9
 msgid "Extension"
 msgstr "分机"
+
+#: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
+msgid "Extension Settings"
+msgstr "分机设置"
 
 #: page.extensionsettings.php:11
 msgid "Follow-Me"
@@ -37,6 +47,10 @@ msgstr "分机随行"
 msgid "FreePBX Extension Settings"
 msgstr "FreePBX 分机设置"
 
+#: extensionsettings.i18n.php:6 extensionsettings.i18n.php:12
+msgid "Settings"
+msgstr "设置"
+
 #: page.extensionsettings.php:13
 msgid "Status"
 msgstr "状态"
@@ -44,9 +58,3 @@ msgstr "状态"
 #: page.extensionsettings.php:10
 msgid "VmX Locator"
 msgstr "VmX 查询器"
-
-#~ msgid "Extension Settings"
-#~ msgstr "分机设置"
-
-#~ msgid "Settings"
-#~ msgstr "设置"

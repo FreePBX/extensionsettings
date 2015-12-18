@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-10 13:41-0400\n"
+"POT-Creation-Date: 2015-12-18 12:27-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,8 +21,19 @@ msgstr ""
 msgid "Call status"
 msgstr ""
 
+#: extensionsettings.i18n.php:8
+msgid ""
+"Creates a list of all extensions and their current settings for CW, CF, CFB, "
+"CFU, VMXB and VMXU"
+msgstr ""
+
 #: page.extensionsettings.php:9
 msgid "Extension"
+msgstr ""
+
+#: extensionsettings.i18n.php:4
+#: extensionsettings.i18n.php:10
+msgid "Extension Settings"
 msgstr ""
 
 #: page.extensionsettings.php:11
@@ -31,6 +42,11 @@ msgstr ""
 
 #: page.extensionsettings.php:20
 msgid "FreePBX Extension Settings"
+msgstr ""
+
+#: extensionsettings.i18n.php:6
+#: extensionsettings.i18n.php:12
+msgid "Settings"
 msgstr ""
 
 #: page.extensionsettings.php:13

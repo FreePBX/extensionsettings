@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-10 13:41-0400\n"
+"POT-Creation-Date: 2015-12-18 12:27-0800\n"
 "PO-Revision-Date: 2015-04-22 20:33+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
@@ -37,9 +37,21 @@ msgstr ""
 msgid "Call status"
 msgstr "Статус вызова"
 
+#: extensionsettings.i18n.php:8
+msgid ""
+"Creates a list of all extensions and their current settings for CW, CF, CFB, "
+"CFU, VMXB and VMXU"
+msgstr ""
+"Создает список всех внутренних номеров и их текущих настроек для CW, CF, "
+"CFB, CFU, VMXB и VMXU"
+
 #: page.extensionsettings.php:9
 msgid "Extension"
 msgstr "Внутренний номер"
+
+#: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
+msgid "Extension Settings"
+msgstr "Настройки внутренних номеров"
 
 #: page.extensionsettings.php:11
 msgid "Follow-Me"
@@ -49,6 +61,10 @@ msgstr "Следуйте сюда"
 msgid "FreePBX Extension Settings"
 msgstr "Настройки внутренних номеров FreePBX"
 
+#: extensionsettings.i18n.php:6 extensionsettings.i18n.php:12
+msgid "Settings"
+msgstr "Установки"
+
 #: page.extensionsettings.php:13
 msgid "Status"
 msgstr "Статус"
@@ -56,16 +72,3 @@ msgstr "Статус"
 #: page.extensionsettings.php:10
 msgid "VmX Locator"
 msgstr "VmX локатор"
-
-#~ msgid ""
-#~ "Creates a list of all extensions and their current settings for CW, CF, "
-#~ "CFB, CFU, VMXB and VMXU"
-#~ msgstr ""
-#~ "Создает список всех внутренних номеров и их текущих настроек для CW, CF, "
-#~ "CFB, CFU, VMXB и VMXU"
-
-#~ msgid "Extension Settings"
-#~ msgstr "Настройки внутренних номеров"
-
-#~ msgid "Settings"
-#~ msgstr "Установки"
