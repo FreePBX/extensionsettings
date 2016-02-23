@@ -12,6 +12,7 @@ $followme   = _("Follow-Me");
 $callstatus = _("Call status");
 $status     =_("Status");
 $html_txt_arr = array();
+$module_select = array();
 global $active_modules;
 
 $html_txt = '<div class="content">';
