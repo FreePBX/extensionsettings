@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-18 12:27-0800\n"
+"POT-Creation-Date: 2016-03-01 11:33-0800\n"
 "PO-Revision-Date: 2014-07-22 15:40+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/"
@@ -56,7 +56,7 @@ msgstr "Настройки на Вътрешна Линия"
 msgid "Follow-Me"
 msgstr "Следвай Ме"
 
-#: page.extensionsettings.php:20
+#: page.extensionsettings.php:21
 msgid "FreePBX Extension Settings"
 msgstr "FreePBX Настройки на Вътрешна Линия"
 

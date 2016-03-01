@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-18 12:27-0800\n"
+"POT-Creation-Date: 2016-03-01 11:33-0800\n"
 "PO-Revision-Date: 2014-02-19 20:56+0200\n"
 "Last-Translator: Chise Mishima <c.mishima@qloog.com>\n"
 "Language-Team: Japanese <http://example.com/projects/freepbx/"
@@ -73,7 +73,7 @@ msgstr "内線設定"
 msgid "Follow-Me"
 msgstr "フォローミー"
 
-#: page.extensionsettings.php:20
+#: page.extensionsettings.php:21
 msgid "FreePBX Extension Settings"
 msgstr "FreePBX内線設定"
 

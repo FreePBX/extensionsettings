@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-18 12:27-0800\n"
+"POT-Creation-Date: 2016-03-01 11:33-0800\n"
 "PO-Revision-Date: 2015-03-25 04:59+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -45,7 +45,7 @@ msgstr "Configuración de Extensión"
 msgid "Follow-Me"
 msgstr "Sigue-Me"
 
-#: page.extensionsettings.php:20
+#: page.extensionsettings.php:21
 msgid "FreePBX Extension Settings"
 msgstr "Configuración de extensión FreePBX"
 
