@@ -10,48 +10,53 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-01 11:33-0800\n"
-"PO-Revision-Date: 2016-03-01 11:33-0800\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-12-03 06:06+0200\n"
+"Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
+"Language-Team: Portuguese (Brazil) "
+"<http://weblate.freepbx.org/projects/freepbx/extensionsettings/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: page.extensionsettings.php:12
 msgid "Call status"
-msgstr ""
+msgstr "Status da chamada"
 
 #: extensionsettings.i18n.php:8
 msgid ""
 "Creates a list of all extensions and their current settings for CW, CF, CFB, "
 "CFU, VMXB and VMXU"
 msgstr ""
+"Cria uma lista de todos os ramais e suas atuais configurações para CW, CF, "
+"CFB, CFU, VMXB e VMXU"
 
 #: page.extensionsettings.php:9
 msgid "Extension"
-msgstr ""
+msgstr "Ramal"
 
 #: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
 msgid "Extension Settings"
-msgstr ""
+msgstr "Configurações de Ramal"
 
 #: page.extensionsettings.php:11
 msgid "Follow-Me"
-msgstr ""
+msgstr "Siga-Me"
 
 #: page.extensionsettings.php:21
 msgid "FreePBX Extension Settings"
-msgstr ""
+msgstr "Configurações de Ramal FreePBX"
 
 #: extensionsettings.i18n.php:6 extensionsettings.i18n.php:12
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"
 
 #: page.extensionsettings.php:13
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: page.extensionsettings.php:10
 msgid "VmX Locator"
-msgstr ""
+msgstr "Localizador VmX"
