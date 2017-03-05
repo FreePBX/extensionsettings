@@ -10,17 +10,20 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-01 11:33-0800\n"
-"PO-Revision-Date: 2016-03-01 11:33-0800\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-03-04 20:17+0200\n"
+"Last-Translator: Nicolas <freepbx@riendeau.org>\n"
+"Language-Team: French "
+"<http://weblate.freepbx.org/projects/freepbx/extensionsettings/fr_FR/>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: page.extensionsettings.php:12
 msgid "Call status"
-msgstr ""
+msgstr "Statut d'appel"
 
 #: extensionsettings.i18n.php:8
 msgid ""
@@ -30,28 +33,28 @@ msgstr ""
 
 #: page.extensionsettings.php:9
 msgid "Extension"
-msgstr ""
+msgstr "Poste"
 
 #: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
 msgid "Extension Settings"
-msgstr ""
+msgstr "Paramètres de poste"
 
 #: page.extensionsettings.php:11
 msgid "Follow-Me"
-msgstr ""
+msgstr "Suivez-Moi"
 
 #: page.extensionsettings.php:21
 msgid "FreePBX Extension Settings"
-msgstr ""
+msgstr "Paramètres de poste de FreePBX"
 
 #: extensionsettings.i18n.php:6 extensionsettings.i18n.php:12
 msgid "Settings"
-msgstr ""
+msgstr "Paramètres"
 
 #: page.extensionsettings.php:13
 msgid "Status"
-msgstr ""
+msgstr "Statut"
 
 #: page.extensionsettings.php:10
 msgid "VmX Locator"
-msgstr ""
+msgstr "Localisateur VMX"
