@@ -10,48 +10,53 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-01 11:33-0800\n"
-"PO-Revision-Date: 2016-03-01 11:33-0800\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-07-04 09:33+0200\n"
+"Last-Translator: PETER <ftek@ymail.com>\n"
+"Language-Team: Vietnamese "
+"<http://weblate.freepbx.org/projects/freepbx/extensionsettings/vi/>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: page.extensionsettings.php:12
 msgid "Call status"
-msgstr ""
+msgstr "Trạng thái cuộc gọi"
 
 #: extensionsettings.i18n.php:8
 msgid ""
 "Creates a list of all extensions and their current settings for CW, CF, CFB, "
 "CFU, VMXB and VMXU"
 msgstr ""
+"Tạo một danh sách tất cả các máy nhanh và các cài đặt hiện tại của nó đối "
+"với CW, CF, CFB, CFU, VMXB và VMXU"
 
 #: page.extensionsettings.php:9
 msgid "Extension"
-msgstr ""
+msgstr "Máy nhánh"
 
 #: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
 msgid "Extension Settings"
-msgstr ""
+msgstr "Cài đặt máy nhánh"
 
 #: page.extensionsettings.php:11
 msgid "Follow-Me"
-msgstr ""
+msgstr "Follow me- Tính năng tự động chuyển cuộc gọi đến 1 máy nhánh khác"
 
 #: page.extensionsettings.php:21
 msgid "FreePBX Extension Settings"
-msgstr ""
+msgstr "Cài đặt máy nhánh FreePBX"
 
 #: extensionsettings.i18n.php:6 extensionsettings.i18n.php:12
 msgid "Settings"
-msgstr ""
+msgstr "Cài đặt"
 
 #: page.extensionsettings.php:13
 msgid "Status"
-msgstr ""
+msgstr "Trạng thái"
 
 #: page.extensionsettings.php:10
 msgid "VmX Locator"
-msgstr ""
+msgstr "Bộ định vị VmX"
