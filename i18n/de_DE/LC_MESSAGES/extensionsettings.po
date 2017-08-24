@@ -10,31 +10,36 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-01 11:33-0800\n"
-"PO-Revision-Date: 2016-03-01 11:33-0800\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-08-24 03:18+0200\n"
+"Last-Translator: hammer125 <auswertung@aon.at>\n"
+"Language-Team: German "
+"<http://weblate.freepbx.org/projects/freepbx/extensionsettings/de_DE/>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: page.extensionsettings.php:12
 msgid "Call status"
-msgstr ""
+msgstr "Anrufstatus"
 
 #: extensionsettings.i18n.php:8
 msgid ""
 "Creates a list of all extensions and their current settings for CW, CF, CFB, "
 "CFU, VMXB and VMXU"
 msgstr ""
+"Erstellt eine Liste aller Nebenstellen und deren aktuellen Einstellungen für "
+"CW, CF, CFB, CFU, VMXB und VMXU"
 
 #: page.extensionsettings.php:9
 msgid "Extension"
-msgstr ""
+msgstr "Nebenstelle"
 
 #: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
 msgid "Extension Settings"
-msgstr ""
+msgstr "Einstellungen für Nebenstellen"
 
 #: page.extensionsettings.php:11
 msgid "Follow-Me"
@@ -42,15 +47,15 @@ msgstr ""
 
 #: page.extensionsettings.php:21
 msgid "FreePBX Extension Settings"
-msgstr ""
+msgstr "Einstellungen für FreePBX-Nebenstellen"
 
 #: extensionsettings.i18n.php:6 extensionsettings.i18n.php:12
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: page.extensionsettings.php:13
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: page.extensionsettings.php:10
 msgid "VmX Locator"
