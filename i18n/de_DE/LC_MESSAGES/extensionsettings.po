@@ -10,16 +10,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-01 11:33-0800\n"
-"PO-Revision-Date: 2017-08-24 03:18+0200\n"
-"Last-Translator: hammer125 <auswertung@aon.at>\n"
-"Language-Team: German "
-"<http://weblate.freepbx.org/projects/freepbx/extensionsettings/de_DE/>\n"
+"PO-Revision-Date: 2018-06-26 14:07+0000\n"
+"Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
+"Language-Team: German <http://*/projects/freepbx/extensionsettings/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.4\n"
+"X-Generator: Weblate 2.19.1\n"
 
 #: page.extensionsettings.php:12
 msgid "Call status"
@@ -43,7 +42,7 @@ msgstr "Einstellungen für Nebenstellen"
 
 #: page.extensionsettings.php:11
 msgid "Follow-Me"
-msgstr ""
+msgstr "Folge-mir"
 
 #: page.extensionsettings.php:21
 msgid "FreePBX Extension Settings"
@@ -59,4 +58,4 @@ msgstr "Status"
 
 #: page.extensionsettings.php:10
 msgid "VmX Locator"
-msgstr ""
+msgstr "VmX-Finder"
