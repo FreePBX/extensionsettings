@@ -3,58 +3,61 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for extensionsettings
-# Copyright (C) 2008-2015 Sangoma, Inc.
+# Copyright (C) 2008-2016 Sangoma, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-01 11:33-0800\n"
-"PO-Revision-Date: 2015-10-11 23:54+0200\n"
-"Last-Translator: Media <mousavi.media@gmail.com>\n"
-"Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/"
-"extensionsettings/fa/>\n"
+"PO-Revision-Date: 2016-09-30 01:22+0200\n"
+"Last-Translator: Maxim <maxim@ua.fm>\n"
+"Language-Team: Ukrainian "
+"<http://weblate.freepbx.org/projects/freepbx/extensionsettings/uk_UA/>\n"
+"Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fa\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: page.extensionsettings.php:12
 msgid "Call status"
-msgstr "وضعیت تماس"
+msgstr "Стан виклику"
 
 #: extensionsettings.i18n.php:8
 msgid ""
 "Creates a list of all extensions and their current settings for CW, CF, CFB, "
 "CFU, VMXB and VMXU"
 msgstr ""
+"Створює список всіх додаткових номерів та їх поточні настройки для CW, CF, "
+"CFB, КУО, VMXB і VMXU"
 
 #: page.extensionsettings.php:9
 msgid "Extension"
-msgstr "داخلی"
+msgstr "Додатковий номер"
 
 #: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
 msgid "Extension Settings"
-msgstr ""
+msgstr "Налаштування додаткового номеру"
 
 #: page.extensionsettings.php:11
 msgid "Follow-Me"
-msgstr "مرا دنبال کن"
+msgstr "Слідуй за мною"
 
 #: page.extensionsettings.php:21
 msgid "FreePBX Extension Settings"
-msgstr "تنظیمات داخلی برنامه"
+msgstr "Налаштування додаткових номерів FreePBX"
 
 #: extensionsettings.i18n.php:6 extensionsettings.i18n.php:12
 msgid "Settings"
-msgstr ""
+msgstr "Налаштування"
 
 #: page.extensionsettings.php:13
 msgid "Status"
-msgstr "وضعیت"
+msgstr "Стан"
 
 #: page.extensionsettings.php:10
 msgid "VmX Locator"
-msgstr ""
+msgstr "VmX локатор"
