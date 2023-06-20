@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-23 18:38+0200\n"
+"POT-Creation-Date: 2023-06-20 05:32+0000\n"
 "PO-Revision-Date: 2023-04-23 18:39+0200\n"
 "Last-Translator: Javier Pastor <jpastor@cerebelum.net>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,86 +21,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: Extensionsettings.class.php:64
-msgid "Command not found!"
-msgstr "¡Comando no encontrado!"
-
-#: Extensionsettings.class.php:96
-#, php-format
-msgid "Page Not Found (%s)!!!!"
-msgstr "¡¡¡¡Página no encontrada (%s)!!!!"
-
-#: Extensionsettings.class.php:131
-msgid "Extensions"
-msgstr "Extensiones"
-
-#: Extensionsettings.class.php:174 views/view.grid.php:26
-msgid "Operator"
-msgstr "Operador"
-
-#: assets/js/extensionsettings.js:18
-msgid "Edit"
-msgstr "Editar"
-
-#: views/page.main.php:4
-msgid "FreePBX Extension Settings"
-msgstr "Configuración de extensión FreePBX"
-
-#: views/view.grid.php:17
-msgid "Extension"
-msgstr "Extensión"
-
-#: views/view.grid.php:18
-msgid "VmX Locator"
-msgstr "Localizador VmX"
-
-#: views/view.grid.php:19
-msgid "Follow-Me"
-msgstr "Sigue-Me"
-
-#: views/view.grid.php:20
-msgid "Call status"
-msgstr "Estado de Llamada"
-
-#: views/view.grid.php:23
-msgid "Status"
-msgstr "Estado"
-
 #: views/view.grid.php:24
 msgid "Busy"
 msgstr "Ocupado"
-
-#: views/view.grid.php:25
-msgid "Unavail"
-msgstr "No disponible"
-
-#: views/view.grid.php:27
-msgid "Press 0"
-msgstr "Pulse 0"
-
-#: views/view.grid.php:28
-msgid "Press 1"
-msgstr "Pulse 1"
-
-#: views/view.grid.php:29
-msgid "Press 2"
-msgstr "Pulse 2"
-
-#: views/view.grid.php:30
-msgid "FM"
-msgstr "FM"
-
-#: views/view.grid.php:31
-msgid "FM-list"
-msgstr "Lista FM"
-
-#: views/view.grid.php:32
-msgid "CW"
-msgstr "CW"
-
-#: views/view.grid.php:33
-msgid "DND"
-msgstr "DND"
 
 #: views/view.grid.php:34
 msgid "CF"
@@ -114,15 +37,95 @@ msgstr "CFB"
 msgid "CFU"
 msgstr "UFC"
 
-#~ msgid ""
-#~ "Creates a list of all extensions and their current settings for CW, CF, "
-#~ "CFB, CFU, VMXB and VMXU"
-#~ msgstr ""
-#~ "Crea una lista de extensiones y su configuración para CW, CF, CFB, CFU, "
-#~ "VMXB y VMXU"
+#: views/view.grid.php:32
+msgid "CW"
+msgstr "CW"
 
-#~ msgid "Extension Settings"
-#~ msgstr "Configuración de Extensión"
+#: views/view.grid.php:20
+msgid "Call status"
+msgstr "Estado de Llamada"
 
-#~ msgid "Settings"
-#~ msgstr "Configuración"
+#: Extensionsettings.class.php:64
+msgid "Command not found!"
+msgstr "¡Comando no encontrado!"
+
+#: extensionsettings.i18n.php:8
+msgid ""
+"Creates a list of all extensions and their current settings for CW, CF, CFB, "
+"CFU, VMXB and VMXU"
+msgstr ""
+"Crea una lista de extensiones y su configuración para CW, CF, CFB, CFU, VMXB "
+"y VMXU"
+
+#: views/view.grid.php:33
+msgid "DND"
+msgstr "DND"
+
+#: assets/js/extensionsettings.js:18
+msgid "Edit"
+msgstr "Editar"
+
+#: views/view.grid.php:17
+msgid "Extension"
+msgstr "Extensión"
+
+#: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
+msgid "Extension Settings"
+msgstr "Configuración de Extensión"
+
+#: Extensionsettings.class.php:131
+msgid "Extensions"
+msgstr "Extensiones"
+
+#: views/view.grid.php:30
+msgid "FM"
+msgstr "FM"
+
+#: views/view.grid.php:31
+msgid "FM-list"
+msgstr "Lista FM"
+
+#: views/view.grid.php:19
+msgid "Follow-Me"
+msgstr "Sigue-Me"
+
+#: views/page.main.php:4
+msgid "FreePBX Extension Settings"
+msgstr "Configuración de extensión FreePBX"
+
+#: Extensionsettings.class.php:174 views/view.grid.php:26
+msgid "Operator"
+msgstr "Operador"
+
+#: Extensionsettings.class.php:96
+#, php-format
+msgid "Page Not Found (%s)!!!!"
+msgstr "¡¡¡¡Página no encontrada (%s)!!!!"
+
+#: views/view.grid.php:27
+msgid "Press 0"
+msgstr "Pulse 0"
+
+#: views/view.grid.php:28
+msgid "Press 1"
+msgstr "Pulse 1"
+
+#: views/view.grid.php:29
+msgid "Press 2"
+msgstr "Pulse 2"
+
+#: extensionsettings.i18n.php:6
+msgid "Settings"
+msgstr "Configuración"
+
+#: views/view.grid.php:23
+msgid "Status"
+msgstr "Estado"
+
+#: views/view.grid.php:25
+msgid "Unavail"
+msgstr "No disponible"
+
+#: views/view.grid.php:18
+msgid "VmX Locator"
+msgstr "Localizador VmX"

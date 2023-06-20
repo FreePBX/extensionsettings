@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-16 12:24+0000\n"
+"POT-Creation-Date: 2023-06-20 05:32+0000\n"
 "PO-Revision-Date: 2017-07-04 09:33+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,9 +21,33 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: page.extensionsettings.php:12
+#: views/view.grid.php:24
+msgid "Busy"
+msgstr ""
+
+#: views/view.grid.php:34
+msgid "CF"
+msgstr ""
+
+#: views/view.grid.php:35
+msgid "CFB"
+msgstr ""
+
+#: views/view.grid.php:36
+msgid "CFU"
+msgstr ""
+
+#: views/view.grid.php:32
+msgid "CW"
+msgstr ""
+
+#: views/view.grid.php:20
 msgid "Call status"
 msgstr "Trạng thái cuộc gọi"
+
+#: Extensionsettings.class.php:64
+msgid "Command not found!"
+msgstr ""
 
 #: extensionsettings.i18n.php:8
 msgid ""
@@ -33,7 +57,15 @@ msgstr ""
 "Tạo một danh sách tất cả các máy nhanh và các cài đặt hiện tại của nó đối "
 "với CW, CF, CFB, CFU, VMXB và VMXU"
 
-#: page.extensionsettings.php:9
+#: views/view.grid.php:33
+msgid "DND"
+msgstr ""
+
+#: assets/js/extensionsettings.js:18
+msgid "Edit"
+msgstr ""
+
+#: views/view.grid.php:17
 msgid "Extension"
 msgstr "Máy nhánh"
 
@@ -41,22 +73,59 @@ msgstr "Máy nhánh"
 msgid "Extension Settings"
 msgstr "Cài đặt máy nhánh"
 
-#: page.extensionsettings.php:11
+#: Extensionsettings.class.php:131
+msgid "Extensions"
+msgstr ""
+
+#: views/view.grid.php:30
+msgid "FM"
+msgstr ""
+
+#: views/view.grid.php:31
+msgid "FM-list"
+msgstr ""
+
+#: views/view.grid.php:19
 msgid "Follow-Me"
 msgstr "Follow me- Tính năng tự động chuyển cuộc gọi đến 1 máy nhánh khác"
 
-#: page.extensionsettings.php:21
+#: views/page.main.php:4
 msgid "FreePBX Extension Settings"
 msgstr "Cài đặt máy nhánh FreePBX"
+
+#: Extensionsettings.class.php:174 views/view.grid.php:26
+msgid "Operator"
+msgstr ""
+
+#: Extensionsettings.class.php:96
+#, php-format
+msgid "Page Not Found (%s)!!!!"
+msgstr ""
+
+#: views/view.grid.php:27
+msgid "Press 0"
+msgstr ""
+
+#: views/view.grid.php:28
+msgid "Press 1"
+msgstr ""
+
+#: views/view.grid.php:29
+msgid "Press 2"
+msgstr ""
 
 #: extensionsettings.i18n.php:6
 msgid "Settings"
 msgstr "Cài đặt"
 
-#: page.extensionsettings.php:13
+#: views/view.grid.php:23
 msgid "Status"
 msgstr "Trạng thái"
 
-#: page.extensionsettings.php:10
+#: views/view.grid.php:25
+msgid "Unavail"
+msgstr ""
+
+#: views/view.grid.php:18
 msgid "VmX Locator"
 msgstr "Bộ định vị VmX"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-16 12:24+0000\n"
+"POT-Creation-Date: 2023-06-20 05:32+0000\n"
 "PO-Revision-Date: 2016-12-03 06:06+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -21,9 +21,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: page.extensionsettings.php:12
+#: views/view.grid.php:24
+msgid "Busy"
+msgstr ""
+
+#: views/view.grid.php:34
+msgid "CF"
+msgstr ""
+
+#: views/view.grid.php:35
+msgid "CFB"
+msgstr ""
+
+#: views/view.grid.php:36
+msgid "CFU"
+msgstr ""
+
+#: views/view.grid.php:32
+msgid "CW"
+msgstr ""
+
+#: views/view.grid.php:20
 msgid "Call status"
 msgstr "Status da chamada"
+
+#: Extensionsettings.class.php:64
+msgid "Command not found!"
+msgstr ""
 
 #: extensionsettings.i18n.php:8
 msgid ""
@@ -33,7 +57,15 @@ msgstr ""
 "Cria uma lista de todos os ramais e suas atuais configurações para CW, CF, "
 "CFB, CFU, VMXB e VMXU"
 
-#: page.extensionsettings.php:9
+#: views/view.grid.php:33
+msgid "DND"
+msgstr ""
+
+#: assets/js/extensionsettings.js:18
+msgid "Edit"
+msgstr ""
+
+#: views/view.grid.php:17
 msgid "Extension"
 msgstr "Ramal"
 
@@ -41,22 +73,59 @@ msgstr "Ramal"
 msgid "Extension Settings"
 msgstr "Configurações de Ramal"
 
-#: page.extensionsettings.php:11
+#: Extensionsettings.class.php:131
+msgid "Extensions"
+msgstr ""
+
+#: views/view.grid.php:30
+msgid "FM"
+msgstr ""
+
+#: views/view.grid.php:31
+msgid "FM-list"
+msgstr ""
+
+#: views/view.grid.php:19
 msgid "Follow-Me"
 msgstr "Siga-Me"
 
-#: page.extensionsettings.php:21
+#: views/page.main.php:4
 msgid "FreePBX Extension Settings"
 msgstr "Configurações de Ramal FreePBX"
+
+#: Extensionsettings.class.php:174 views/view.grid.php:26
+msgid "Operator"
+msgstr ""
+
+#: Extensionsettings.class.php:96
+#, php-format
+msgid "Page Not Found (%s)!!!!"
+msgstr ""
+
+#: views/view.grid.php:27
+msgid "Press 0"
+msgstr ""
+
+#: views/view.grid.php:28
+msgid "Press 1"
+msgstr ""
+
+#: views/view.grid.php:29
+msgid "Press 2"
+msgstr ""
 
 #: extensionsettings.i18n.php:6
 msgid "Settings"
 msgstr "Configurações"
 
-#: page.extensionsettings.php:13
+#: views/view.grid.php:23
 msgid "Status"
 msgstr "Status"
 
-#: page.extensionsettings.php:10
+#: views/view.grid.php:25
+msgid "Unavail"
+msgstr ""
+
+#: views/view.grid.php:18
 msgid "VmX Locator"
 msgstr "Localizador VmX"

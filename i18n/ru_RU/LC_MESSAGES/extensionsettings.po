@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-16 12:24+0000\n"
+"POT-Creation-Date: 2023-06-20 05:32+0000\n"
 "PO-Revision-Date: 2015-04-22 20:33+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
@@ -33,9 +33,33 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: page.extensionsettings.php:12
+#: views/view.grid.php:24
+msgid "Busy"
+msgstr ""
+
+#: views/view.grid.php:34
+msgid "CF"
+msgstr ""
+
+#: views/view.grid.php:35
+msgid "CFB"
+msgstr ""
+
+#: views/view.grid.php:36
+msgid "CFU"
+msgstr ""
+
+#: views/view.grid.php:32
+msgid "CW"
+msgstr ""
+
+#: views/view.grid.php:20
 msgid "Call status"
 msgstr "Статус вызова"
+
+#: Extensionsettings.class.php:64
+msgid "Command not found!"
+msgstr ""
 
 #: extensionsettings.i18n.php:8
 msgid ""
@@ -45,7 +69,15 @@ msgstr ""
 "Создает список всех внутренних номеров и их текущих настроек для CW, CF, "
 "CFB, CFU, VMXB и VMXU"
 
-#: page.extensionsettings.php:9
+#: views/view.grid.php:33
+msgid "DND"
+msgstr ""
+
+#: assets/js/extensionsettings.js:18
+msgid "Edit"
+msgstr ""
+
+#: views/view.grid.php:17
 msgid "Extension"
 msgstr "Внутренний номер"
 
@@ -53,22 +85,59 @@ msgstr "Внутренний номер"
 msgid "Extension Settings"
 msgstr "Настройки внутренних номеров"
 
-#: page.extensionsettings.php:11
+#: Extensionsettings.class.php:131
+msgid "Extensions"
+msgstr ""
+
+#: views/view.grid.php:30
+msgid "FM"
+msgstr ""
+
+#: views/view.grid.php:31
+msgid "FM-list"
+msgstr ""
+
+#: views/view.grid.php:19
 msgid "Follow-Me"
 msgstr "Следуйте сюда"
 
-#: page.extensionsettings.php:21
+#: views/page.main.php:4
 msgid "FreePBX Extension Settings"
 msgstr "Настройки внутренних номеров FreePBX"
+
+#: Extensionsettings.class.php:174 views/view.grid.php:26
+msgid "Operator"
+msgstr ""
+
+#: Extensionsettings.class.php:96
+#, php-format
+msgid "Page Not Found (%s)!!!!"
+msgstr ""
+
+#: views/view.grid.php:27
+msgid "Press 0"
+msgstr ""
+
+#: views/view.grid.php:28
+msgid "Press 1"
+msgstr ""
+
+#: views/view.grid.php:29
+msgid "Press 2"
+msgstr ""
 
 #: extensionsettings.i18n.php:6
 msgid "Settings"
 msgstr "Установки"
 
-#: page.extensionsettings.php:13
+#: views/view.grid.php:23
 msgid "Status"
 msgstr "Статус"
 
-#: page.extensionsettings.php:10
+#: views/view.grid.php:25
+msgid "Unavail"
+msgstr ""
+
+#: views/view.grid.php:18
 msgid "VmX Locator"
 msgstr "VmX локатор"
