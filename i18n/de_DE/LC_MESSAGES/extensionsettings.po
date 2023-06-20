@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-20 05:32+0000\n"
+"POT-Creation-Date: 2023-06-20 05:50+0000\n"
 "PO-Revision-Date: 2018-06-26 14:07+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/extensionsettings/de/>\n"
@@ -69,6 +69,7 @@ msgid "Extension"
 msgstr "Nebenstelle"
 
 #: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
+#: views/page.main.php:4
 msgid "Extension Settings"
 msgstr "Einstellungen für Nebenstellen"
 
@@ -87,10 +88,6 @@ msgstr ""
 #: views/view.grid.php:19
 msgid "Follow-Me"
 msgstr "Folge-mir"
-
-#: views/page.main.php:4
-msgid "FreePBX Extension Settings"
-msgstr "Einstellungen für FreePBX-Nebenstellen"
 
 #: Extensionsettings.class.php:174 views/view.grid.php:26
 msgid "Operator"
@@ -128,3 +125,6 @@ msgstr ""
 #: views/view.grid.php:18
 msgid "VmX Locator"
 msgstr "VmX-Finder"
+
+#~ msgid "FreePBX Extension Settings"
+#~ msgstr "Einstellungen für FreePBX-Nebenstellen"

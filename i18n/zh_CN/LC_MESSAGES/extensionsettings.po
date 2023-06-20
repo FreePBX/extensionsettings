@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-20 05:32+0000\n"
+"POT-Creation-Date: 2023-06-20 05:50+0000\n"
 "PO-Revision-Date: 2015-11-16 07:21+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -68,6 +68,7 @@ msgid "Extension"
 msgstr "分机"
 
 #: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
+#: views/page.main.php:4
 msgid "Extension Settings"
 msgstr "分机设置"
 
@@ -86,10 +87,6 @@ msgstr ""
 #: views/view.grid.php:19
 msgid "Follow-Me"
 msgstr "分机随行"
-
-#: views/page.main.php:4
-msgid "FreePBX Extension Settings"
-msgstr "FreePBX 分机设置"
 
 #: Extensionsettings.class.php:174 views/view.grid.php:26
 msgid "Operator"
@@ -127,3 +124,6 @@ msgstr ""
 #: views/view.grid.php:18
 msgid "VmX Locator"
 msgstr "VmX 查询器"
+
+#~ msgid "FreePBX Extension Settings"
+#~ msgstr "FreePBX 分机设置"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-20 05:32+0000\n"
+"POT-Creation-Date: 2023-06-20 05:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,6 +66,7 @@ msgstr ""
 
 #: extensionsettings.i18n.php:4
 #: extensionsettings.i18n.php:10
+#: views/page.main.php:4
 msgid "Extension Settings"
 msgstr ""
 
@@ -83,10 +84,6 @@ msgstr ""
 
 #: views/view.grid.php:19
 msgid "Follow-Me"
-msgstr ""
-
-#: views/page.main.php:4
-msgid "FreePBX Extension Settings"
 msgstr ""
 
 #: Extensionsettings.class.php:174

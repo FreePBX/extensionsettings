@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-20 05:32+0000\n"
+"POT-Creation-Date: 2023-06-20 05:50+0000\n"
 "PO-Revision-Date: 2016-12-03 06:06+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -70,6 +70,7 @@ msgid "Extension"
 msgstr "Ramal"
 
 #: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
+#: views/page.main.php:4
 msgid "Extension Settings"
 msgstr "Configurações de Ramal"
 
@@ -88,10 +89,6 @@ msgstr ""
 #: views/view.grid.php:19
 msgid "Follow-Me"
 msgstr "Siga-Me"
-
-#: views/page.main.php:4
-msgid "FreePBX Extension Settings"
-msgstr "Configurações de Ramal FreePBX"
 
 #: Extensionsettings.class.php:174 views/view.grid.php:26
 msgid "Operator"
@@ -129,3 +126,6 @@ msgstr ""
 #: views/view.grid.php:18
 msgid "VmX Locator"
 msgstr "Localizador VmX"
+
+#~ msgid "FreePBX Extension Settings"
+#~ msgstr "Configurações de Ramal FreePBX"

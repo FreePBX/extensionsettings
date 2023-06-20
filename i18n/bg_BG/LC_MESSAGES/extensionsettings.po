@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-20 05:32+0000\n"
+"POT-Creation-Date: 2023-06-20 05:50+0000\n"
 "PO-Revision-Date: 2014-07-22 15:40+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/"
@@ -81,6 +81,7 @@ msgid "Extension"
 msgstr "Вътрешна Линия"
 
 #: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
+#: views/page.main.php:4
 msgid "Extension Settings"
 msgstr "Настройки на Вътрешна Линия"
 
@@ -99,10 +100,6 @@ msgstr ""
 #: views/view.grid.php:19
 msgid "Follow-Me"
 msgstr "Следвай Ме"
-
-#: views/page.main.php:4
-msgid "FreePBX Extension Settings"
-msgstr "FreePBX Настройки на Вътрешна Линия"
 
 #: Extensionsettings.class.php:174 views/view.grid.php:26
 msgid "Operator"
@@ -140,3 +137,6 @@ msgstr ""
 #: views/view.grid.php:18
 msgid "VmX Locator"
 msgstr "VmX Локатор"
+
+#~ msgid "FreePBX Extension Settings"
+#~ msgstr "FreePBX Настройки на Вътрешна Линия"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-20 05:32+0000\n"
+"POT-Creation-Date: 2023-06-20 05:50+0000\n"
 "PO-Revision-Date: 2016-04-30 12:11+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -70,6 +70,7 @@ msgid "Extension"
 msgstr "داخلی"
 
 #: extensionsettings.i18n.php:4 extensionsettings.i18n.php:10
+#: views/page.main.php:4
 msgid "Extension Settings"
 msgstr "پیکربندی داخلی"
 
@@ -88,10 +89,6 @@ msgstr ""
 #: views/view.grid.php:19
 msgid "Follow-Me"
 msgstr "مرا دنبال کن"
-
-#: views/page.main.php:4
-msgid "FreePBX Extension Settings"
-msgstr "تنظیمات داخلی مرکزتماس رایگان"
 
 #: Extensionsettings.class.php:174 views/view.grid.php:26
 msgid "Operator"
@@ -129,3 +126,6 @@ msgstr ""
 #: views/view.grid.php:18
 msgid "VmX Locator"
 msgstr "محل VmX"
+
+#~ msgid "FreePBX Extension Settings"
+#~ msgstr "تنظیمات داخلی مرکزتماس رایگان"
