@@ -161,7 +161,7 @@ class Extensionsettings extends FreePBX_Helpers implements BMO
 							break;
 					}
 	
-					$vmxunavail = ($ampuser['/AMPUSER/'.$exten.'/vmx/unavail/state'] == "enabled");
+					$vmxunavail = (isset($ampuser['/AMPUSER/'.$exten.'/vmx/unavail/state']) && $ampuser['/AMPUSER/'.$exten.'/vmx/unavail/state'] == "enabled");
 					
 					// Do we have a VmX Busy/Unavail number for 0? If we have, then show it, otherwise display "Operator"
 					if( isset($ampuser['/AMPUSER/'.$exten.'/vmx/busy/0/ext']))
@@ -195,7 +195,7 @@ class Extensionsettings extends FreePBX_Helpers implements BMO
 				
 				// If follow-me is enabled, get the follow-me list
 				// $fmlist = $fmstate ? str_replace("-", "<br>", $ampuser['/AMPUSER/'.$exten.'/followme/grplist']) : '';
-				$fmlist = $fmstate ? explode("-", $ampuser['/AMPUSER/'.$exten.'/followme/grplist']) : array();
+				$fmlist = $fmstate && ! empty($ampuser['/AMPUSER/'.$exten.'/followme/grplist']) ? explode("-", $ampuser['/AMPUSER/'.$exten.'/followme/grplist']) : array();
 
 				$cw  = isset($settings['cw']['/CW/'.$exten]) && $settings['cw']['/CW/'.$exten] == "ENABLED" ? true : false;
 				$dnd = isset($settings['dnd']['/DND/'.$exten]) && $settings['dnd']['/DND/'.$exten] == "YES" ? true : false;
