@@ -37,3 +37,79 @@ function FMListFormat(value, row, idx)
     });
     return html;
 }
+
+
+$("#set_table").bootstrapTable({
+    onColumnSwitch: onColumnSwitch
+});
+
+// Global varible for the colspan default values.
+var colspanSizeGlobal = {};
+
+// Resize colspan
+function onColumnSwitch(field, checked)
+{
+    var options = $("#set_table").bootstrapTable("getOptions");
+    var nCol    = 0;
+
+    $("#set_table thead tr:first-child th").each(function()
+    {
+        var colspan = $(this).attr("colspan");
+        if (colspan == undefined)
+        {
+            // If not colspan continue, ignorer column
+            return true;
+        }
+        else
+        {
+            // convert string to integer
+            colspan = parseInt(colspan, 10);
+        }
+
+        // Check if colspan is set int the global colspansize
+        var colspanSize = colspanSizeGlobal[(this).cellIndex];
+        if (colspanSize == undefined)
+        {
+            colspanSizeGlobal[(this).cellIndex] = colspan;
+            colspanSize = colspan;
+        }
+        
+        // Set size column group and detect which columns are visible
+        var stopCol = nCol + colspanSize;
+        for (var i = nCol; i < stopCol; i++)
+        {
+            var column = options.columns[1][i];
+            if (column == undefined) { continue; }
+
+            colspanSize -= !column.visible ? 1 : 0;
+        }
+
+        // Resize column group
+        $(this).attr("colspan", colspanSize);
+        nCol = stopCol;
+
+        // Show or hide column group
+        if (colspanSize > 0)
+        {
+            $(this).show();
+        }
+        else
+        {
+            $(this).hide();
+        }
+    });
+}
+
+// Remove column from show/hide columns button
+$('#set_table').on('post-body.bs.table', function()
+{
+    $('th.remove-from-show-columns').each(function()
+    {
+        var dataField = $(this).attr('data-field');
+        if (dataField == undefined || dataField == null || dataField == "")
+        {
+            return true;
+        }
+        $('ul.dropdown-menu input[data-field="' + dataField + '"]').closest('li').remove();
+    });
+});
