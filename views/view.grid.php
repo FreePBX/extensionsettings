@@ -14,13 +14,13 @@
     class="table table-striped">
     <thead>
         <tr>
-            <th data-field="exten" data-formatter="ExtensionsFormat" data-sortable="true" class="col-md-3" rowspan="2"><?php echo _("Extension"); ?></th>
+            <th data-field="exten" data-formatter="ExtensionsFormat" data-sortable="true" data-show-column="true" class="col-md-3 remove-from-show-columns" rowspan="2"><?php echo _("Extension"); ?></th>
             <th colspan="7" class="col-md-4"><?php echo _("VmX Locator"); ?></th>
             <th colspan="2" class="col-md-2"><?php echo _("Follow-Me"); ?></th>
             <th colspan="5" class="col-md-3"><?php echo _("Call status"); ?></th>
         </tr>
         <tr>
-            <th data-field="vmxstate" data-formatter="OnOffFormat" data-sortable="true" class="text-center"><?php echo _("Status"); ?></th>
+            <th data-field="vmxstate" data-formatter="OnOffFormat" data-sortable="true" class="text-center remove-from-show-columns"><?php echo _("Status"); ?></th>
             <th data-field="vmxbusy" data-formatter="OnOffFormat" data-sortable="true" class="text-center"><?php echo _("Busy"); ?></th>
             <th data-field="vmxunavail" data-formatter="OnOffFormat" data-sortable="true" class="text-center"><?php echo _("Unavail"); ?></th>
             <th data-field="vmxoperator" data-formatter="OnOffFormat" data-sortable="true" class="text-center"><?php echo _("Operator"); ?></th>
