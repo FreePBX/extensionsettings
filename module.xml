@@ -2,7 +2,7 @@
   <rawname>extensionsettings</rawname>
   <repo>unsupported</repo>
   <name>Extension Settings</name>
-  <version>16.0.5</version>
+  <version>17.0.1</version>
   <publisher>Sangoma Technologies Corporation</publisher>
   <license>GPLv3+</license>
   <licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -12,15 +12,11 @@
     <extensionsettings>Extension Settings</extensionsettings>
   </menuitems>
 	<changelog>
-		*16.0.5* FREEPBX-24154 
-		*16.0.4* Packaging of ver 16.0.4
-		*16.0.3* Packaging of ver 16.0.3
-		*16.0.2* FREEPBX-24154 
-		*16.0.1* 16.0
+		*17.0.1* 17.0
 	</changelog>
   <md5sum>c62830a311338fa38b1aa0e9f9284fc3</md5sum>
   <location>release/2.11/extensionsettings-2.11.0.2.tgz</location>
   <supported>
-    <version>16.0</version>
+    <version>17.0</version>
   </supported>
 </module>
