@@ -2,7 +2,7 @@
   <rawname>extensionsettings</rawname>
   <repo>unsupported</repo>
   <name>Extension Settings</name>
-  <version>17.0.1</version>
+  <version>18.0.1</version>
   <publisher>Sangoma Technologies Corporation</publisher>
   <more-info>https://sangomakb.atlassian.net/wiki/spaces/PG/pages/26804339/PBX+GUI+-+Extension+Settings</more-info>
   <license>GPLv3+</license>
@@ -13,11 +13,11 @@
     <extensionsettings>Extension Settings</extensionsettings>
   </menuitems>
 	<changelog>
-		*17.0.1* 17.0
+		*18.0.1* initial release
 	</changelog>
   <md5sum>c62830a311338fa38b1aa0e9f9284fc3</md5sum>
   <location>release/2.11/extensionsettings-2.11.0.2.tgz</location>
   <supported>
-    <version>17.0</version>
+    <version>18.0</version>
   </supported>
 </module>
