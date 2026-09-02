@@ -137,11 +137,11 @@ class Extensionsettings extends FreePBX_Helpers implements BMO
 
 			foreach ($value as $exten => $item)
 			{
-				$description = explode(":", $item['description'], 2);
-				$description = trim($description[1]);
+				$description = explode(":", $item['description'] ?? '', 2);
+				$description = trim($description[1] ?? '');
 				//Hack for PHP 5.3 negative number key issue
 				//https://bugs.php.net/bug.php?id=51008
-				preg_match('/display=(\d+)&/i', $item['edit_url'], $matches);
+				preg_match('/display=(\d+)&/i', $item['edit_url'] ?? '', $matches);
 				$exten = !empty($matches[1]) ? $matches[1] : $exten;
 				//end hack
 	
@@ -195,7 +195,7 @@ class Extensionsettings extends FreePBX_Helpers implements BMO
 				
 				// If follow-me is enabled, get the follow-me list
 				// $fmlist = $fmstate ? str_replace("-", "<br>", $ampuser['/AMPUSER/'.$exten.'/followme/grplist']) : '';
-				$fmlist = $fmstate && ! empty($ampuser['/AMPUSER/'.$exten.'/followme/grplist']) ? explode("-", $ampuser['/AMPUSER/'.$exten.'/followme/grplist']) : array();
+				$fmlist = $fmstate && ! empty($ampuser['/AMPUSER/'.$exten.'/followme/grplist']) ? explode("-", (string) $ampuser['/AMPUSER/'.$exten.'/followme/grplist']) : array();
 
 				$cw  = isset($settings['cw']['/CW/'.$exten]) && $settings['cw']['/CW/'.$exten] == "ENABLED" ? true : false;
 				$dnd = isset($settings['dnd']['/DND/'.$exten]) && $settings['dnd']['/DND/'.$exten] == "YES" ? true : false;
@@ -238,13 +238,13 @@ class Extensionsettings extends FreePBX_Helpers implements BMO
 	public function getActiveModuleRawName($module)
 	{
 		$data = $this->getActiveModule($module);
-		return $data['rawname'];
+		return $data['rawname'] ?? '';
 	}
 
 	public function getActiveModuleName($module)
 	{
 		$data = $this->getActiveModule($module);
-		return $data['name'];
+		return $data['name'] ?? '';
 	}
 
 	public function getAstMan($option)
