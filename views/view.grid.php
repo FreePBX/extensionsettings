@@ -1,7 +1,13 @@
 <?php if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); } ?>
 
+<div id="toolbar-extensions">
+	<a href="config.php?display=extensions&amp;tech_hardware=pjsip_generic" class="btn btn-default">
+		<i class="fa fa-plus"></i> <?php echo _("Add Extension")?>
+	</a>
+</div>
 <table
     id="set_table"
+    data-toolbar="#toolbar-extensions"
     data-url="ajax.php?module=extensionsettings&command=list"
     data-cache="false"
     data-toggle="table"
