@@ -18,6 +18,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: views/view.grid.php:5
+msgid "Add Extension"
+msgstr ""
+
 #: views/view.grid.php:24
 msgid "Busy"
 msgstr ""
